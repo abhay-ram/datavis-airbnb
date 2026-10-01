@@ -15,14 +15,47 @@ keine externen Requests. Damit läuft sie offline, in jedem CMS und in jedem ifr
 # Vorschau-Server (http://127.0.0.1:4173/)
 node tools/serve.mjs
 
-# alles neu bauen
+# alles neu bauen (nach dist/)
 python tools/build.py
+
+# Website für GitHub Pages nach docs/ bauen
+python tools/publish.py
 
 # Datenexporte für Datawrapper / Tableau neu erzeugen
 python tools/export_data.py
 
 # automatisierte Prüfung aller Varianten
 cd tools && node smoke.mjs
+```
+
+---
+
+## Veröffentlichen (GitHub Pages)
+
+Das Repository ist vorbereitet: Branch `main`, Remote `origin`,
+veröffentlichter Ordner `docs/`.
+
+```bash
+git remote -v                       # origin -> datavis-airbnb.git
+git push -u origin main             # Zugangsdaten werden einmalig abgefragt
+```
+
+Danach im Repository einmalig einstellen:
+**Settings → Pages → Source: „Deploy from a branch“ → Branch: `main` → Ordner: `/docs` → Save**
+
+Nach ein bis zwei Minuten ist die Seite erreichbar unter
+
+```
+https://abhay-ram.github.io/datavis-airbnb/
+```
+
+Diese Adresse ist zugleich die Basis für die Pageflow-Einbettung, z. B.
+`https://abhay-ram.github.io/datavis-airbnb/1-linien-nach-bezirk.html?embed=1`.
+
+Nach Änderungen an den Quellen genügt:
+
+```bash
+python tools/publish.py && git add -A && git commit -m "Update" && git push
 ```
 
 ---
@@ -127,6 +160,9 @@ Spatial File über `Area Code` = `code` verknüpfen; Karte über Latitude/Longit
 * **Daten:** Inside Airbnb / GLA Housing Research Note 4 (April 2015, Mai 2019);
   Bezirksaggregation aus dem Inside-Airbnb-Listing-CSV vom 19. Juni 2026
   (92.799 Inserate in 33 Bezirken). Einwohnerzahlen: ONS.
+* **Getrennt gehalten:** Das Demografie-Workbook
+  (`London_Demographie_Datawrapper_Ready_FINAL_demograhie.xlsx`) wird **nicht** mit den
+  Airbnb-Daten vermischt. Es hat eigene Datenexporte und eigene Visualisierungen.
 * **Geometrie:** ONS Open Geography Portal, *Local Authority Districts (May 2024)*,
   generalised & clipped, Open Government Licence v3.0.
 * **Hinweis:** Alle Werte sind Stichtagsbeobachtungen, keine Jahresdurchschnitte.
@@ -139,7 +175,8 @@ Spatial File über `Area Code` = `code` verknüpfen; Karte über Latitude/Longit
 ## Projektstruktur
 
 ```
-London_Airbnb_Datawrapper_Ready_FINAL.xlsx   Quelldaten
+London_Airbnb_Datawrapper_Ready_FINAL.xlsx        Quelldaten Airbnb
+London_Demographie_Datawrapper_Ready_FINAL...xlsx Quelldaten Demografie
 src/
   theme.css                 gemeinsames Design-System
   core.js                   Datenzugriff, Skalen, Tooltip, Fokus, Embed-Bridge, Story-Engine
@@ -147,9 +184,11 @@ src/
   versions/<id>.{html,css,js}   Markup, Stil und Logik je Variante
 tools/
   prepare_data.py           xlsx + GeoJSON -> src/generated/data.js
-  export_data.py            -> dist/data/*.csv, *.geojson
-  build.py                  baut die eigenständigen HTML-Dateien
+  export_data.py            -> <out>/data/*.csv, *.geojson
+  build.py [out]            baut die eigenständigen HTML-Dateien
+  publish.py                baut die komplette Website nach docs/
   smoke.mjs                 jsdom-Prüfung aller Varianten und Themes
   serve.mjs                 Vorschau-Server
-dist/                       Ergebnis: einbettbare Dateien + Datenexporte
+dist/                       lokales Build-Ergebnis (nicht im Repository)
+docs/                       veröffentlichte Website für GitHub Pages
 ```

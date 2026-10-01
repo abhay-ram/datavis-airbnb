@@ -60,12 +60,6 @@ VERSIONS = [
         title="Airbnb in London · Kartenstory",
         desc="Scroll-Story auf der Karte: Hotspots, Wachstum und Konzentration.",
     ),
-    dict(
-        id="chart-7-demography",
-        out="7-airbnb-und-demografie.html",
-        title="Airbnb in London · Airbnb und Demografie",
-        desc="Streudiagramm: Airbnb-Dichte im Verhältnis zu Bevölkerungsdichte, Alter, Bildung und Herkunft.",
-    ),
 ]
 
 GALLERY = dict(

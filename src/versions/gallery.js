@@ -24,10 +24,7 @@
       desc: "Proportionale Blasen im Bezirkszentrum plus drei synchronisierte Mini-Karten – eine je Stichtag, auf gemeinsamer Größenskala." },
     { file: "6-scrolly-story-karte.html", kind: "map", tag: "Story · Karte",
       title: "Scroll-Story auf der Karte",
-      desc: "Sieben Schritte über die Karte: Konzentration, Wachstum, Pro-Kopf-Dichte, der Stadtrand und die drei Bezirke mit Rückgang." },
-    { file: "7-airbnb-und-demografie.html", kind: "chart", tag: "Streuung",
-      title: "Airbnb und Demografie",
-      desc: "Zwei Achsen frei wählbar: Airbnb-Dichte gegen Bevölkerungsdichte, Medianalter, Bildung, Herkunft oder Lohn – mit Trendlinie, Korrelation und Ausreißern." }
+      desc: "Sieben Schritte über die Karte: Konzentration, Wachstum, Pro-Kopf-Dichte, der Stadtrand und die drei Bezirke mit Rückgang." }
   ];
 
   var FILES = [
@@ -35,8 +32,7 @@
     { n: "airbnb-london-wide.csv", t: "csv", s: "3,7 KB", d: "Ein Bezirk pro Zeile, die drei Stichtage als Spalten plus absolute und prozentuale Veränderungen. Ideal für Datawrapper-Linien- und Balkendiagramme." },
     { n: "airbnb-london-map.csv", t: "csv", s: "3,6 KB", d: "Auf den Kartenschlüssel reduziert: Area Code, Bezirk, Jahr, Inserate und Inserate je 1.000 – zum Verbinden mit dem GeoJSON." },
     { n: "london-boroughs.geojson", t: "geo", s: "126 KB", d: "ONS-Bezirksgrenzen in WGS84, alle Ringe als MultiPolygon. Für Datawrapper-Custom-Maps und als Tableau-Spatial-File." },
-    { n: "london-boroughs-lite.geojson", t: "geo", s: "32 KB", d: "Dieselben Grenzen, auf rund 180 m vereinfacht – für kleine Karten und schnelle Ladezeiten." },
-    { n: "airbnb-demografie-borough.csv", t: "csv", s: "5,2 KB", d: "Airbnb und Demografie je Bezirk in einer Zeile: Inserate, Pro-Kopf-Dichte, Bevölkerung, Dichte, Medianalter, Bildung, Herkunft, Medianlohn." }
+    { n: "london-boroughs-lite.geojson", t: "geo", s: "32 KB", d: "Dieselben Grenzen, auf rund 180 m vereinfacht – für kleine Karten und schnelle Ladezeiten." }
   ];
 
   /* ------------------------------------------------------------ cards ---- */

@@ -16,7 +16,6 @@ import zipfile
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 XLSX = os.path.join(ROOT, "London_Airbnb_Datawrapper_Ready_FINAL.xlsx")
-DEMO = os.path.join(ROOT, "London_Demographie_Datawrapper_Ready_FINAL_demograhie.xlsx")
 CACHE = os.path.join(ROOT, "tools", "cache")
 GEOJSON = os.path.join(CACHE, "london_boroughs.geojson")
 OUT = os.path.join(ROOT, "src", "generated", "data.js")
@@ -72,68 +71,6 @@ def load_data():
     wide = read_sheet(zf, "sheet3.xml")     # one row per borough
     long_ = read_sheet(zf, "sheet2.xml")    # one row per borough x snapshot
     return wide, long_
-
-
-# ----------------------------------------------------------- demography -----
-
-DEMO_COLUMNS = [
-    ("pop2025", "Population 2025", 0),
-    ("density", "Density 2025", 0),
-    ("medianAge", "Median age 2025", 1),
-    ("popGrowth", "Population growth 2024", 4),
-    ("noQual", "No qualifications share", 4),
-    ("level4", "Level 4+ share", 4),
-    ("ukBorn", "UK-born share", 4),
-    ("nonUkBorn", "Non-UK-born share", 4),
-    ("africaBorn", "Africa-born share", 4),
-    ("asiaBorn", "Middle East & Asia-born share", 4),
-    ("americasBorn", "Americas & Caribbean-born share", 4),
-    ("earnings", "Median gross weekly earnings 2024", 1),
-]
-
-
-def load_demography():
-    """Borough_Profile aus dem Demographie-Workbook, verknüpft über Area Code."""
-    if not os.path.exists(DEMO):
-        return {}, None
-    zf = zipfile.ZipFile(DEMO)
-    wb = ET.fromstring(zf.read("xl/workbook.xml"))
-    names = [s.attrib["name"] for s in wb.iter(M + "sheet")]
-    if "Borough_Profile" not in names:
-        return {}, None
-    idx = names.index("Borough_Profile") + 1
-    rows = read_sheet(zf, "sheet%d.xml" % idx)
-    if not rows:
-        return {}, None
-
-    # read_sheet liefert bereits Datensätze, deren Schlüssel die Kopfzeile sind.
-    def pick(rec, prefix):
-        for k in rec:
-            if str(k).startswith(prefix):
-                return rec[k]
-        return None
-
-    def num(v, nd):
-        if v is None or v == "":
-            return None
-        try:
-            return round(float(v), nd)
-        except (TypeError, ValueError):
-            return None
-
-    out, sources = {}, set()
-    for rec in rows:
-        code = pick(rec, "Area Code")
-        if not isinstance(code, str) or not code.startswith("E09"):
-            continue
-        row = {}
-        for key, prefix, nd in DEMO_COLUMNS:
-            row[key] = num(pick(rec, prefix), nd)
-        out[code] = row
-        for v in rec.values():
-            if isinstance(v, str) and v.startswith("http"):
-                sources.add(v)
-    return out, sorted(sources)
 
 
 # ----------------------------------------------------------------- geo ------
@@ -254,7 +191,6 @@ def build_geo(features, width=1000, eps=0.35, min_area=1.2):
 
 def main():
     wide, long_ = load_data()
-    demo, demoSources = load_demography()
     geo = build_geo(fetch_geo()["features"])
 
     def num(v):
@@ -290,7 +226,6 @@ def main():
                 "2019": int(num(row["Population 2019"])),
                 "2026": int(num(row["Population Reference Current (2025)"])),
             },
-            "demo": demo.get(code),
         })
 
     missing = [b["code"] for b in boroughs if not geo["paths"].get(b["code"])]
@@ -326,10 +261,6 @@ def main():
             "unitPer1k": "Inserate je 1.000 Einwohner:innen",
             "sources": sources,
             "notes": notes,
-            "demoSources": demoSources,
-            "demoAvailable": bool(demo),
-            "demoNote": "Bevölkerung und Strukturmerkmale: ONS Mid-Year Population Estimates 2025, "
-                        "Census 2021 (TS067, TS012), ONS ASHE. Verknüpfung über Area Code.",
             "geoSource": geo["source"],
             "generated": "2026",
         },
