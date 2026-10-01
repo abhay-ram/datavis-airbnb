@@ -1,11 +1,19 @@
-# London Airbnb · sechs einbettbare Visualisierungen
+# London · zwölf einbettbare Visualisierungen
 
-Drei Karten-Varianten und drei reine Balken-/Linien-Varianten auf Basis von
-`London_Airbnb_Datawrapper_Ready_FINAL.xlsx` — 33 Bezirke von Greater London über die
-drei Stichtage **April 2015**, **Mai 2019** und **19. Juni 2026**.
+Zwei getrennte Datensätze, je drei Karten- und drei Diagramm-Varianten:
+
+| Datensatz | Quelle | Varianten |
+|---|---|---|
+| **Airbnb** | `London_Airbnb_Datawrapper_Ready_FINAL.xlsx` – 33 Bezirke, Stichtage April 2015 / Mai 2019 / 19. Juni 2026 | `1`–`6` |
+| **Demografie** | `London_Demographie_Datawrapper_Ready_FINAL_demograhie.xlsx` – Bevölkerung 2011–2025, Alter, Bildung, Herkunft, Lohn | `d1`–`d6` |
+
+Die beiden Datensätze werden **nicht vermischt**: eigene Aufbereitung, eigene Payloads,
+eigene Exporte. Gemeinsam genutzt werden nur die Bezirksgrenzen (ONS-Geometrie, keine Fachdaten).
 
 Jede Variante ist **eine einzige HTML-Datei**: keine Bibliothek, kein CDN, kein Tile-Server,
 keine externen Requests. Damit läuft sie offline, in jedem CMS und in jedem iframe.
+
+**Live: <https://abhay-ram.github.io/datavis-airbnb/>**
 
 ---
 
@@ -65,6 +73,17 @@ Details zum Ablauf stehen in [`WORKFLOW.md`](WORKFLOW.md).
 | `5-karte-bubbles.html` | Karte | Proportionale Blasenkarte plus drei synchronisierte Mini-Karten (ein Stichtag je Karte) |
 | `6-scrolly-story-karte.html` | Karte | Scroll-Story auf der Karte: Konzentration, Wachstum, Pro-Kopf-Dichte, Stadtrand, Rückgang |
 | `index.html` | — | Embed-Kit: Live-Vorschauen, Einbettungscodes, Datenbeschreibungen, Parameterübersicht |
+
+### Datensatz 2 · Demografie (`d1`–`d6`)
+
+| Datei | Typ | Inhalt |
+|---|---|---|
+| `d1-bevoelkerung-linien.html` | Diagramm | **Bevölkerungsentwicklung: X = Jahr 2011–2025, Y = die 33 Bezirke** – als Rang, Wert oder Index, mit Zeitraum-Regler |
+| `d2-altersstruktur.html` | Diagramm | Altersprofil in Einzeljahrgängen (0–90+) je Bezirk im Vergleich zu Greater London |
+| `d3-bildung-herkunft-lohn.html` | Diagramm | Auf 100 % normierte Balken: Bildungsabschluss, Geburtsland, Lohnentwicklung seit 2002 |
+| `d4-karte-indikatoren.html` | Karte | Zehn Merkmale auf echten ONS-Grenzen, mit Jahresregler und Flächen-/Blasendarstellung |
+| `d5-karte-wandel.html` | Karte | Bevölkerungsveränderung als divergierende Karte plus Kleine Vielfache 2011/2018/2025 |
+| `d6-scrolly-story.html` | Karte | Acht Schritte von der Bevölkerungszahl über Alter und Bildung bis zum Lohn |
 
 **Interaktion in allen Varianten:** Bezirke per Zeiger hervorheben, per Klick fixieren,
 nach Jahr filtern, Messgröße wechseln (Inserate ↔ Inserate je 1.000 Einwohner:innen).
@@ -138,7 +157,11 @@ frame.contentWindow.postMessage({ type: 'theme', theme: 'dark' }, '*');
 | `airbnb-london-long.csv` | Bereinigt: eine Zeile je Bezirk × Stichtag, mit Einwohnerzahlen und Koordinaten |
 | `airbnb-london-wide.csv` | Ein Bezirk pro Zeile, die drei Stichtage als Spalten plus Veränderungen |
 | `airbnb-london-map.csv` | Auf den Kartenschlüssel reduziert (`Area Code`, Bezirk, Jahr, Werte) |
-| `london-boroughs.geojson` | ONS-Bezirksgrenzen in WGS84, alle Ringe als MultiPolygon |
+| `demografie-bevoelkerung-lang.csv` | Bevölkerung, Dichte und Medianalter je Bezirk und Jahr, 2011–2025 |
+| `demografie-bezirksprofil.csv` | Ein Bezirk pro Zeile: Alters-, Geschlechter-, Bildungs- und Herkunftsanteile, Medianlohn |
+| `demografie-altersstruktur.csv` | Altersstruktur in Einzeljahren (0–90+) je Bezirk, 2025 |
+| `demografie-lohn-lang.csv` | Median-Bruttowochenverdienst je Bezirk und Jahr, 2002–2024 |
+| `london-boroughs.geojson` | ONS-Bezirksgrenzen in WGS84, alle Ringe als MultiPolygon (für beide Datensätze) |
 | `london-boroughs-lite.geojson` | Dieselben Grenzen, auf ~180 m vereinfacht |
 
 **Datawrapper-Karte:** Custom Map mit `london-boroughs.geojson`, Daten aus
@@ -151,12 +174,13 @@ Spatial File über `Area Code` = `code` verknüpfen; Karte über Latitude/Longit
 
 ## Quellen
 
-* **Daten:** Inside Airbnb / GLA Housing Research Note 4 (April 2015, Mai 2019);
+* **Daten (Airbnb):** Inside Airbnb / GLA Housing Research Note 4 (April 2015, Mai 2019);
   Bezirksaggregation aus dem Inside-Airbnb-Listing-CSV vom 19. Juni 2026
-  (92.799 Inserate in 33 Bezirken). Einwohnerzahlen: ONS.
-* **Getrennt gehalten:** Das Demografie-Workbook
-  (`London_Demographie_Datawrapper_Ready_FINAL_demograhie.xlsx`) wird **nicht** mit den
-  Airbnb-Daten vermischt. Es hat eigene Datenexporte und eigene Visualisierungen.
+  (92.799 Inserate in 33 Bezirken).
+* **Daten (Demografie):** ONS Mid-Year Population Estimates 2011–2025 (Bevölkerung, Dichte,
+  Medianalter, Altersstruktur, Geschlecht), ONS Census 2021 (TS067 Bildung, TS012 Geburtsland),
+  ONS ASHE / NOMIS 2002–2024 (Medianlohn).
+* **Getrennt gehalten:** Beide Workbooks werden unabhängig aufbereitet und nie verknüpft.
 * **Geometrie:** ONS Open Geography Portal, *Local Authority Districts (May 2024)*,
   generalised & clipped, Open Government Licence v3.0.
 * **Hinweis:** Alle Werte sind Stichtagsbeobachtungen, keine Jahresdurchschnitte.
@@ -170,19 +194,23 @@ Spatial File über `Area Code` = `code` verknüpfen; Karte über Latitude/Longit
 
 ```
 London_Airbnb_Datawrapper_Ready_FINAL.xlsx        Quelldaten Airbnb
-London_Demographie_Datawrapper_Ready_FINAL...xlsx Quelldaten Demografie
+London_Demographie_...demograhie.xlsx             Quelldaten Demografie
 src/
   theme.css                 gemeinsames Design-System
   core.js                   Datenzugriff, Skalen, Tooltip, Fokus, Embed-Bridge, Story-Engine
-  generated/data.js         erzeugt: Daten + vorprojizierte SVG-Bezirkspfade
+  demography.js             Laufzeit für den zweiten Datensatz (V.demo)
+  generated/data.js         erzeugt: Airbnb-Daten + vorprojizierte SVG-Bezirkspfade
+  generated/demography.js   erzeugt: Demografie-Daten
   versions/<id>.{html,css,js}   Markup, Stil und Logik je Variante
 tools/
-  prepare_data.py           xlsx + GeoJSON -> src/generated/data.js
+  prepare_data.py           Airbnb-xlsx + GeoJSON -> src/generated/data.js
+  prepare_demography.py     Demografie-xlsx      -> src/generated/demography.js
   export_data.py            -> <out>/data/*.csv, *.geojson
   build.py [out]            baut die eigenständigen HTML-Dateien
   publish.py                baut die komplette Website nach docs/
+  deploy.py                 baut, committet, pusht, aktualisiert gh-pages
   smoke.mjs                 jsdom-Prüfung aller Varianten und Themes
   serve.mjs                 Vorschau-Server
 dist/                       lokales Build-Ergebnis (nicht im Repository)
-docs/                       veröffentlichte Website für GitHub Pages
+docs/                       veröffentlichte Website
 ```

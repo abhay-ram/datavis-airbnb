@@ -1,0 +1,760 @@
+Borough,Area Code,Year,Median gross weekly earnings (GBP),Publication status,Source
+Barking and Dagenham,E09000002,2002,383.3,Value published,ONS ASHE / NOMIS
+Barnet,E09000003,2002,427.4,Value published,ONS ASHE / NOMIS
+Bexley,E09000004,2002,405.0,Value published,ONS ASHE / NOMIS
+Brent,E09000005,2002,368.4,Value published,ONS ASHE / NOMIS
+Bromley,E09000006,2002,440.1,Value published,ONS ASHE / NOMIS
+Camden,E09000007,2002,470.8,Value published,ONS ASHE / NOMIS
+City of London,E09000001,2002,,Value not published / suppressed,ONS ASHE / NOMIS
+Croydon,E09000008,2002,405.3,Value published,ONS ASHE / NOMIS
+Ealing,E09000009,2002,431.5,Value published,ONS ASHE / NOMIS
+Enfield,E09000010,2002,363.1,Value published,ONS ASHE / NOMIS
+Greenwich,E09000011,2002,401.3,Value published,ONS ASHE / NOMIS
+Hackney,E09000012,2002,387.1,Value published,ONS ASHE / NOMIS
+Hammersmith and Fulham,E09000013,2002,492.8,Value published,ONS ASHE / NOMIS
+Haringey,E09000014,2002,384.9,Value published,ONS ASHE / NOMIS
+Harrow,E09000015,2002,378.1,Value published,ONS ASHE / NOMIS
+Havering,E09000016,2002,385.1,Value published,ONS ASHE / NOMIS
+Hillingdon,E09000017,2002,396.3,Value published,ONS ASHE / NOMIS
+Hounslow,E09000018,2002,388.6,Value published,ONS ASHE / NOMIS
+Islington,E09000019,2002,465.0,Value published,ONS ASHE / NOMIS
+Kensington and Chelsea,E09000020,2002,601.5,Value published,ONS ASHE / NOMIS
+Kingston upon Thames,E09000021,2002,435.7,Value published,ONS ASHE / NOMIS
+Lambeth,E09000022,2002,404.3,Value published,ONS ASHE / NOMIS
+Lewisham,E09000023,2002,394.9,Value published,ONS ASHE / NOMIS
+Merton,E09000024,2002,436.3,Value published,ONS ASHE / NOMIS
+Newham,E09000025,2002,338.2,Value published,ONS ASHE / NOMIS
+Redbridge,E09000026,2002,402.5,Value published,ONS ASHE / NOMIS
+Richmond upon Thames,E09000027,2002,564.9,Value published,ONS ASHE / NOMIS
+Southwark,E09000028,2002,397.6,Value published,ONS ASHE / NOMIS
+Sutton,E09000029,2002,410.9,Value published,ONS ASHE / NOMIS
+Tower Hamlets,E09000030,2002,427.2,Value published,ONS ASHE / NOMIS
+Waltham Forest,E09000031,2002,403.8,Value published,ONS ASHE / NOMIS
+Wandsworth,E09000032,2002,502.1,Value published,ONS ASHE / NOMIS
+Westminster,E09000033,2002,480.0,Value published,ONS ASHE / NOMIS
+Barking and Dagenham,E09000002,2003,354.9,Value published,ONS ASHE / NOMIS
+Barnet,E09000003,2003,450.1,Value published,ONS ASHE / NOMIS
+Bexley,E09000004,2003,431.9,Value published,ONS ASHE / NOMIS
+Brent,E09000005,2003,359.8,Value published,ONS ASHE / NOMIS
+Bromley,E09000006,2003,449.2,Value published,ONS ASHE / NOMIS
+Camden,E09000007,2003,491.1,Value published,ONS ASHE / NOMIS
+City of London,E09000001,2003,,Value not published / suppressed,ONS ASHE / NOMIS
+Croydon,E09000008,2003,406.4,Value published,ONS ASHE / NOMIS
+Ealing,E09000009,2003,448.5,Value published,ONS ASHE / NOMIS
+Enfield,E09000010,2003,377.1,Value published,ONS ASHE / NOMIS
+Greenwich,E09000011,2003,430.4,Value published,ONS ASHE / NOMIS
+Hackney,E09000012,2003,395.2,Value published,ONS ASHE / NOMIS
+Hammersmith and Fulham,E09000013,2003,498.3,Value published,ONS ASHE / NOMIS
+Haringey,E09000014,2003,429.4,Value published,ONS ASHE / NOMIS
+Harrow,E09000015,2003,417.1,Value published,ONS ASHE / NOMIS
+Havering,E09000016,2003,413.4,Value published,ONS ASHE / NOMIS
+Hillingdon,E09000017,2003,414.4,Value published,ONS ASHE / NOMIS
+Hounslow,E09000018,2003,395.6,Value published,ONS ASHE / NOMIS
+Islington,E09000019,2003,472.0,Value published,ONS ASHE / NOMIS
+Kensington and Chelsea,E09000020,2003,612.7,Value published,ONS ASHE / NOMIS
+Kingston upon Thames,E09000021,2003,441.5,Value published,ONS ASHE / NOMIS
+Lambeth,E09000022,2003,425.5,Value published,ONS ASHE / NOMIS
+Lewisham,E09000023,2003,429.6,Value published,ONS ASHE / NOMIS
+Merton,E09000024,2003,439.4,Value published,ONS ASHE / NOMIS
+Newham,E09000025,2003,343.4,Value published,ONS ASHE / NOMIS
+Redbridge,E09000026,2003,433.9,Value published,ONS ASHE / NOMIS
+Richmond upon Thames,E09000027,2003,567.8,Value published,ONS ASHE / NOMIS
+Southwark,E09000028,2003,423.8,Value published,ONS ASHE / NOMIS
+Sutton,E09000029,2003,421.7,Value published,ONS ASHE / NOMIS
+Tower Hamlets,E09000030,2003,450.4,Value published,ONS ASHE / NOMIS
+Waltham Forest,E09000031,2003,428.7,Value published,ONS ASHE / NOMIS
+Wandsworth,E09000032,2003,502.5,Value published,ONS ASHE / NOMIS
+Westminster,E09000033,2003,504.7,Value published,ONS ASHE / NOMIS
+Barking and Dagenham,E09000002,2004,360.1,Value published,ONS ASHE / NOMIS
+Barnet,E09000003,2004,453.3,Value published,ONS ASHE / NOMIS
+Bexley,E09000004,2004,438.1,Value published,ONS ASHE / NOMIS
+Brent,E09000005,2004,395.5,Value published,ONS ASHE / NOMIS
+Bromley,E09000006,2004,461.2,Value published,ONS ASHE / NOMIS
+Camden,E09000007,2004,507.9,Value published,ONS ASHE / NOMIS
+City of London,E09000001,2004,,Value not published / suppressed,ONS ASHE / NOMIS
+Croydon,E09000008,2004,413.3,Value published,ONS ASHE / NOMIS
+Ealing,E09000009,2004,444.2,Value published,ONS ASHE / NOMIS
+Enfield,E09000010,2004,386.0,Value published,ONS ASHE / NOMIS
+Greenwich,E09000011,2004,441.8,Value published,ONS ASHE / NOMIS
+Hackney,E09000012,2004,411.1,Value published,ONS ASHE / NOMIS
+Hammersmith and Fulham,E09000013,2004,512.0,Value published,ONS ASHE / NOMIS
+Haringey,E09000014,2004,437.3,Value published,ONS ASHE / NOMIS
+Harrow,E09000015,2004,407.5,Value published,ONS ASHE / NOMIS
+Havering,E09000016,2004,449.3,Value published,ONS ASHE / NOMIS
+Hillingdon,E09000017,2004,431.5,Value published,ONS ASHE / NOMIS
+Hounslow,E09000018,2004,400.1,Value published,ONS ASHE / NOMIS
+Islington,E09000019,2004,499.0,Value published,ONS ASHE / NOMIS
+Kensington and Chelsea,E09000020,2004,691.6,Value published,ONS ASHE / NOMIS
+Kingston upon Thames,E09000021,2004,460.7,Value published,ONS ASHE / NOMIS
+Lambeth,E09000022,2004,446.7,Value published,ONS ASHE / NOMIS
+Lewisham,E09000023,2004,425.1,Value published,ONS ASHE / NOMIS
+Merton,E09000024,2004,442.5,Value published,ONS ASHE / NOMIS
+Newham,E09000025,2004,371.0,Value published,ONS ASHE / NOMIS
+Redbridge,E09000026,2004,439.8,Value published,ONS ASHE / NOMIS
+Richmond upon Thames,E09000027,2004,595.6,Value published,ONS ASHE / NOMIS
+Southwark,E09000028,2004,412.6,Value published,ONS ASHE / NOMIS
+Sutton,E09000029,2004,426.5,Value published,ONS ASHE / NOMIS
+Tower Hamlets,E09000030,2004,481.6,Value published,ONS ASHE / NOMIS
+Waltham Forest,E09000031,2004,433.2,Value published,ONS ASHE / NOMIS
+Wandsworth,E09000032,2004,526.8,Value published,ONS ASHE / NOMIS
+Westminster,E09000033,2004,549.0,Value published,ONS ASHE / NOMIS
+Barking and Dagenham,E09000002,2005,375.1,Value published,ONS ASHE / NOMIS
+Barnet,E09000003,2005,442.3,Value published,ONS ASHE / NOMIS
+Bexley,E09000004,2005,452.4,Value published,ONS ASHE / NOMIS
+Brent,E09000005,2005,394.7,Value published,ONS ASHE / NOMIS
+Bromley,E09000006,2005,464.8,Value published,ONS ASHE / NOMIS
+Camden,E09000007,2005,541.0,Value published,ONS ASHE / NOMIS
+City of London,E09000001,2005,,Value not published / suppressed,ONS ASHE / NOMIS
+Croydon,E09000008,2005,421.0,Value published,ONS ASHE / NOMIS
+Ealing,E09000009,2005,437.8,Value published,ONS ASHE / NOMIS
+Enfield,E09000010,2005,408.1,Value published,ONS ASHE / NOMIS
+Greenwich,E09000011,2005,405.0,Value published,ONS ASHE / NOMIS
+Hackney,E09000012,2005,432.1,Value published,ONS ASHE / NOMIS
+Hammersmith and Fulham,E09000013,2005,490.7,Value published,ONS ASHE / NOMIS
+Haringey,E09000014,2005,438.3,Value published,ONS ASHE / NOMIS
+Harrow,E09000015,2005,430.9,Value published,ONS ASHE / NOMIS
+Havering,E09000016,2005,463.9,Value published,ONS ASHE / NOMIS
+Hillingdon,E09000017,2005,431.3,Value published,ONS ASHE / NOMIS
+Hounslow,E09000018,2005,413.9,Value published,ONS ASHE / NOMIS
+Islington,E09000019,2005,532.5,Value published,ONS ASHE / NOMIS
+Kensington and Chelsea,E09000020,2005,733.0,Value published,ONS ASHE / NOMIS
+Kingston upon Thames,E09000021,2005,479.0,Value published,ONS ASHE / NOMIS
+Lambeth,E09000022,2005,460.3,Value published,ONS ASHE / NOMIS
+Lewisham,E09000023,2005,431.8,Value published,ONS ASHE / NOMIS
+Merton,E09000024,2005,493.9,Value published,ONS ASHE / NOMIS
+Newham,E09000025,2005,383.2,Value published,ONS ASHE / NOMIS
+Redbridge,E09000026,2005,432.7,Value published,ONS ASHE / NOMIS
+Richmond upon Thames,E09000027,2005,584.7,Value published,ONS ASHE / NOMIS
+Southwark,E09000028,2005,430.4,Value published,ONS ASHE / NOMIS
+Sutton,E09000029,2005,437.0,Value published,ONS ASHE / NOMIS
+Tower Hamlets,E09000030,2005,479.1,Value published,ONS ASHE / NOMIS
+Waltham Forest,E09000031,2005,415.5,Value published,ONS ASHE / NOMIS
+Wandsworth,E09000032,2005,538.9,Value published,ONS ASHE / NOMIS
+Westminster,E09000033,2005,574.0,Value published,ONS ASHE / NOMIS
+Barking and Dagenham,E09000002,2006,417.6,Value published,ONS ASHE / NOMIS
+Barnet,E09000003,2006,466.1,Value published,ONS ASHE / NOMIS
+Bexley,E09000004,2006,443.4,Value published,ONS ASHE / NOMIS
+Brent,E09000005,2006,398.7,Value published,ONS ASHE / NOMIS
+Bromley,E09000006,2006,479.5,Value published,ONS ASHE / NOMIS
+Camden,E09000007,2006,552.2,Value published,ONS ASHE / NOMIS
+City of London,E09000001,2006,,Value not published / suppressed,ONS ASHE / NOMIS
+Croydon,E09000008,2006,441.6,Value published,ONS ASHE / NOMIS
+Ealing,E09000009,2006,452.0,Value published,ONS ASHE / NOMIS
+Enfield,E09000010,2006,409.6,Value published,ONS ASHE / NOMIS
+Greenwich,E09000011,2006,456.3,Value published,ONS ASHE / NOMIS
+Hackney,E09000012,2006,428.8,Value published,ONS ASHE / NOMIS
+Hammersmith and Fulham,E09000013,2006,545.7,Value published,ONS ASHE / NOMIS
+Haringey,E09000014,2006,455.0,Value published,ONS ASHE / NOMIS
+Harrow,E09000015,2006,459.9,Value published,ONS ASHE / NOMIS
+Havering,E09000016,2006,424.9,Value published,ONS ASHE / NOMIS
+Hillingdon,E09000017,2006,439.3,Value published,ONS ASHE / NOMIS
+Hounslow,E09000018,2006,432.6,Value published,ONS ASHE / NOMIS
+Islington,E09000019,2006,503.7,Value published,ONS ASHE / NOMIS
+Kensington and Chelsea,E09000020,2006,670.9,Value published,ONS ASHE / NOMIS
+Kingston upon Thames,E09000021,2006,499.8,Value published,ONS ASHE / NOMIS
+Lambeth,E09000022,2006,455.6,Value published,ONS ASHE / NOMIS
+Lewisham,E09000023,2006,431.4,Value published,ONS ASHE / NOMIS
+Merton,E09000024,2006,474.4,Value published,ONS ASHE / NOMIS
+Newham,E09000025,2006,390.9,Value published,ONS ASHE / NOMIS
+Redbridge,E09000026,2006,466.2,Value published,ONS ASHE / NOMIS
+Richmond upon Thames,E09000027,2006,583.0,Value published,ONS ASHE / NOMIS
+Southwark,E09000028,2006,459.9,Value published,ONS ASHE / NOMIS
+Sutton,E09000029,2006,460.0,Value published,ONS ASHE / NOMIS
+Tower Hamlets,E09000030,2006,472.5,Value published,ONS ASHE / NOMIS
+Waltham Forest,E09000031,2006,427.7,Value published,ONS ASHE / NOMIS
+Wandsworth,E09000032,2006,557.2,Value published,ONS ASHE / NOMIS
+Westminster,E09000033,2006,598.1,Value published,ONS ASHE / NOMIS
+Barking and Dagenham,E09000002,2007,446.7,Value published,ONS ASHE / NOMIS
+Barnet,E09000003,2007,460.0,Value published,ONS ASHE / NOMIS
+Bexley,E09000004,2007,469.8,Value published,ONS ASHE / NOMIS
+Brent,E09000005,2007,421.6,Value published,ONS ASHE / NOMIS
+Bromley,E09000006,2007,506.3,Value published,ONS ASHE / NOMIS
+Camden,E09000007,2007,592.6,Value published,ONS ASHE / NOMIS
+City of London,E09000001,2007,,Value not published / suppressed,ONS ASHE / NOMIS
+Croydon,E09000008,2007,454.0,Value published,ONS ASHE / NOMIS
+Ealing,E09000009,2007,465.3,Value published,ONS ASHE / NOMIS
+Enfield,E09000010,2007,448.7,Value published,ONS ASHE / NOMIS
+Greenwich,E09000011,2007,456.2,Value published,ONS ASHE / NOMIS
+Hackney,E09000012,2007,451.1,Value published,ONS ASHE / NOMIS
+Hammersmith and Fulham,E09000013,2007,546.2,Value published,ONS ASHE / NOMIS
+Haringey,E09000014,2007,462.9,Value published,ONS ASHE / NOMIS
+Harrow,E09000015,2007,460.7,Value published,ONS ASHE / NOMIS
+Havering,E09000016,2007,455.8,Value published,ONS ASHE / NOMIS
+Hillingdon,E09000017,2007,469.6,Value published,ONS ASHE / NOMIS
+Hounslow,E09000018,2007,453.6,Value published,ONS ASHE / NOMIS
+Islington,E09000019,2007,517.5,Value published,ONS ASHE / NOMIS
+Kensington and Chelsea,E09000020,2007,689.9,Value published,ONS ASHE / NOMIS
+Kingston upon Thames,E09000021,2007,527.4,Value published,ONS ASHE / NOMIS
+Lambeth,E09000022,2007,490.7,Value published,ONS ASHE / NOMIS
+Lewisham,E09000023,2007,436.4,Value published,ONS ASHE / NOMIS
+Merton,E09000024,2007,511.3,Value published,ONS ASHE / NOMIS
+Newham,E09000025,2007,390.8,Value published,ONS ASHE / NOMIS
+Redbridge,E09000026,2007,480.1,Value published,ONS ASHE / NOMIS
+Richmond upon Thames,E09000027,2007,578.2,Value published,ONS ASHE / NOMIS
+Southwark,E09000028,2007,487.8,Value published,ONS ASHE / NOMIS
+Sutton,E09000029,2007,475.7,Value published,ONS ASHE / NOMIS
+Tower Hamlets,E09000030,2007,531.9,Value published,ONS ASHE / NOMIS
+Waltham Forest,E09000031,2007,445.4,Value published,ONS ASHE / NOMIS
+Wandsworth,E09000032,2007,572.4,Value published,ONS ASHE / NOMIS
+Westminster,E09000033,2007,625.5,Value published,ONS ASHE / NOMIS
+Barking and Dagenham,E09000002,2008,449.9,Value published,ONS ASHE / NOMIS
+Barnet,E09000003,2008,502.2,Value published,ONS ASHE / NOMIS
+Bexley,E09000004,2008,483.9,Value published,ONS ASHE / NOMIS
+Brent,E09000005,2008,437.0,Value published,ONS ASHE / NOMIS
+Bromley,E09000006,2008,546.0,Value published,ONS ASHE / NOMIS
+Camden,E09000007,2008,614.6,Value published,ONS ASHE / NOMIS
+City of London,E09000001,2008,,Value not published / suppressed,ONS ASHE / NOMIS
+Croydon,E09000008,2008,481.6,Value published,ONS ASHE / NOMIS
+Ealing,E09000009,2008,504.1,Value published,ONS ASHE / NOMIS
+Enfield,E09000010,2008,424.9,Value published,ONS ASHE / NOMIS
+Greenwich,E09000011,2008,480.8,Value published,ONS ASHE / NOMIS
+Hackney,E09000012,2008,472.6,Value published,ONS ASHE / NOMIS
+Hammersmith and Fulham,E09000013,2008,584.8,Value published,ONS ASHE / NOMIS
+Haringey,E09000014,2008,498.4,Value published,ONS ASHE / NOMIS
+Harrow,E09000015,2008,479.1,Value published,ONS ASHE / NOMIS
+Havering,E09000016,2008,506.4,Value published,ONS ASHE / NOMIS
+Hillingdon,E09000017,2008,479.1,Value published,ONS ASHE / NOMIS
+Hounslow,E09000018,2008,435.0,Value published,ONS ASHE / NOMIS
+Islington,E09000019,2008,566.7,Value published,ONS ASHE / NOMIS
+Kensington and Chelsea,E09000020,2008,774.7,Value published,ONS ASHE / NOMIS
+Kingston upon Thames,E09000021,2008,516.7,Value published,ONS ASHE / NOMIS
+Lambeth,E09000022,2008,494.5,Value published,ONS ASHE / NOMIS
+Lewisham,E09000023,2008,446.4,Value published,ONS ASHE / NOMIS
+Merton,E09000024,2008,526.0,Value published,ONS ASHE / NOMIS
+Newham,E09000025,2008,403.0,Value published,ONS ASHE / NOMIS
+Redbridge,E09000026,2008,526.9,Value published,ONS ASHE / NOMIS
+Richmond upon Thames,E09000027,2008,642.5,Value published,ONS ASHE / NOMIS
+Southwark,E09000028,2008,493.2,Value published,ONS ASHE / NOMIS
+Sutton,E09000029,2008,505.3,Value published,ONS ASHE / NOMIS
+Tower Hamlets,E09000030,2008,548.1,Value published,ONS ASHE / NOMIS
+Waltham Forest,E09000031,2008,466.7,Value published,ONS ASHE / NOMIS
+Wandsworth,E09000032,2008,618.8,Value published,ONS ASHE / NOMIS
+Westminster,E09000033,2008,670.8,Value published,ONS ASHE / NOMIS
+Barking and Dagenham,E09000002,2009,448.8,Value published,ONS ASHE / NOMIS
+Barnet,E09000003,2009,528.1,Value published,ONS ASHE / NOMIS
+Bexley,E09000004,2009,486.3,Value published,ONS ASHE / NOMIS
+Brent,E09000005,2009,439.1,Value published,ONS ASHE / NOMIS
+Bromley,E09000006,2009,545.6,Value published,ONS ASHE / NOMIS
+Camden,E09000007,2009,621.1,Value published,ONS ASHE / NOMIS
+City of London,E09000001,2009,762.4,Value published,ONS ASHE / NOMIS
+Croydon,E09000008,2009,496.0,Value published,ONS ASHE / NOMIS
+Ealing,E09000009,2009,498.9,Value published,ONS ASHE / NOMIS
+Enfield,E09000010,2009,460.2,Value published,ONS ASHE / NOMIS
+Greenwich,E09000011,2009,513.2,Value published,ONS ASHE / NOMIS
+Hackney,E09000012,2009,503.7,Value published,ONS ASHE / NOMIS
+Hammersmith and Fulham,E09000013,2009,585.1,Value published,ONS ASHE / NOMIS
+Haringey,E09000014,2009,489.3,Value published,ONS ASHE / NOMIS
+Harrow,E09000015,2009,494.3,Value published,ONS ASHE / NOMIS
+Havering,E09000016,2009,485.7,Value published,ONS ASHE / NOMIS
+Hillingdon,E09000017,2009,480.0,Value published,ONS ASHE / NOMIS
+Hounslow,E09000018,2009,469.3,Value published,ONS ASHE / NOMIS
+Islington,E09000019,2009,588.2,Value published,ONS ASHE / NOMIS
+Kensington and Chelsea,E09000020,2009,805.2,Value published,ONS ASHE / NOMIS
+Kingston upon Thames,E09000021,2009,566.2,Value published,ONS ASHE / NOMIS
+Lambeth,E09000022,2009,522.4,Value published,ONS ASHE / NOMIS
+Lewisham,E09000023,2009,486.9,Value published,ONS ASHE / NOMIS
+Merton,E09000024,2009,529.7,Value published,ONS ASHE / NOMIS
+Newham,E09000025,2009,421.6,Value published,ONS ASHE / NOMIS
+Redbridge,E09000026,2009,518.5,Value published,ONS ASHE / NOMIS
+Richmond upon Thames,E09000027,2009,617.7,Value published,ONS ASHE / NOMIS
+Southwark,E09000028,2009,526.7,Value published,ONS ASHE / NOMIS
+Sutton,E09000029,2009,503.2,Value published,ONS ASHE / NOMIS
+Tower Hamlets,E09000030,2009,556.2,Value published,ONS ASHE / NOMIS
+Waltham Forest,E09000031,2009,476.2,Value published,ONS ASHE / NOMIS
+Wandsworth,E09000032,2009,631.8,Value published,ONS ASHE / NOMIS
+Westminster,E09000033,2009,672.2,Value published,ONS ASHE / NOMIS
+Barking and Dagenham,E09000002,2010,429.3,Value published,ONS ASHE / NOMIS
+Barnet,E09000003,2010,501.6,Value published,ONS ASHE / NOMIS
+Bexley,E09000004,2010,518.1,Value published,ONS ASHE / NOMIS
+Brent,E09000005,2010,423.1,Value published,ONS ASHE / NOMIS
+Bromley,E09000006,2010,527.2,Value published,ONS ASHE / NOMIS
+Camden,E09000007,2010,583.0,Value published,ONS ASHE / NOMIS
+City of London,E09000001,2010,,Value not published / suppressed,ONS ASHE / NOMIS
+Croydon,E09000008,2010,515.5,Value published,ONS ASHE / NOMIS
+Ealing,E09000009,2010,494.5,Value published,ONS ASHE / NOMIS
+Enfield,E09000010,2010,439.4,Value published,ONS ASHE / NOMIS
+Greenwich,E09000011,2010,488.7,Value published,ONS ASHE / NOMIS
+Hackney,E09000012,2010,501.3,Value published,ONS ASHE / NOMIS
+Hammersmith and Fulham,E09000013,2010,596.9,Value published,ONS ASHE / NOMIS
+Haringey,E09000014,2010,495.7,Value published,ONS ASHE / NOMIS
+Harrow,E09000015,2010,506.1,Value published,ONS ASHE / NOMIS
+Havering,E09000016,2010,493.7,Value published,ONS ASHE / NOMIS
+Hillingdon,E09000017,2010,499.8,Value published,ONS ASHE / NOMIS
+Hounslow,E09000018,2010,479.0,Value published,ONS ASHE / NOMIS
+Islington,E09000019,2010,599.0,Value published,ONS ASHE / NOMIS
+Kensington and Chelsea,E09000020,2010,791.5,Value published,ONS ASHE / NOMIS
+Kingston upon Thames,E09000021,2010,544.4,Value published,ONS ASHE / NOMIS
+Lambeth,E09000022,2010,574.9,Value published,ONS ASHE / NOMIS
+Lewisham,E09000023,2010,492.7,Value published,ONS ASHE / NOMIS
+Merton,E09000024,2010,531.5,Value published,ONS ASHE / NOMIS
+Newham,E09000025,2010,422.4,Value published,ONS ASHE / NOMIS
+Redbridge,E09000026,2010,506.1,Value published,ONS ASHE / NOMIS
+Richmond upon Thames,E09000027,2010,668.7,Value published,ONS ASHE / NOMIS
+Southwark,E09000028,2010,521.2,Value published,ONS ASHE / NOMIS
+Sutton,E09000029,2010,495.3,Value published,ONS ASHE / NOMIS
+Tower Hamlets,E09000030,2010,547.1,Value published,ONS ASHE / NOMIS
+Waltham Forest,E09000031,2010,475.7,Value published,ONS ASHE / NOMIS
+Wandsworth,E09000032,2010,643.0,Value published,ONS ASHE / NOMIS
+Westminster,E09000033,2010,718.7,Value published,ONS ASHE / NOMIS
+Barking and Dagenham,E09000002,2011,452.1,Value published,ONS ASHE / NOMIS
+Barnet,E09000003,2011,498.3,Value published,ONS ASHE / NOMIS
+Bexley,E09000004,2011,505.1,Value published,ONS ASHE / NOMIS
+Brent,E09000005,2011,414.9,Value published,ONS ASHE / NOMIS
+Bromley,E09000006,2011,551.7,Value published,ONS ASHE / NOMIS
+Camden,E09000007,2011,612.0,Value published,ONS ASHE / NOMIS
+City of London,E09000001,2011,,Value not published / suppressed,ONS ASHE / NOMIS
+Croydon,E09000008,2011,481.7,Value published,ONS ASHE / NOMIS
+Ealing,E09000009,2011,486.6,Value published,ONS ASHE / NOMIS
+Enfield,E09000010,2011,475.8,Value published,ONS ASHE / NOMIS
+Greenwich,E09000011,2011,488.0,Value published,ONS ASHE / NOMIS
+Hackney,E09000012,2011,517.4,Value published,ONS ASHE / NOMIS
+Hammersmith and Fulham,E09000013,2011,594.1,Value published,ONS ASHE / NOMIS
+Haringey,E09000014,2011,471.8,Value published,ONS ASHE / NOMIS
+Harrow,E09000015,2011,487.7,Value published,ONS ASHE / NOMIS
+Havering,E09000016,2011,505.3,Value published,ONS ASHE / NOMIS
+Hillingdon,E09000017,2011,497.4,Value published,ONS ASHE / NOMIS
+Hounslow,E09000018,2011,473.2,Value published,ONS ASHE / NOMIS
+Islington,E09000019,2011,598.5,Value published,ONS ASHE / NOMIS
+Kensington and Chelsea,E09000020,2011,793.9,Value published,ONS ASHE / NOMIS
+Kingston upon Thames,E09000021,2011,579.8,Value published,ONS ASHE / NOMIS
+Lambeth,E09000022,2011,536.7,Value published,ONS ASHE / NOMIS
+Lewisham,E09000023,2011,473.2,Value published,ONS ASHE / NOMIS
+Merton,E09000024,2011,536.9,Value published,ONS ASHE / NOMIS
+Newham,E09000025,2011,382.5,Value published,ONS ASHE / NOMIS
+Redbridge,E09000026,2011,479.5,Value published,ONS ASHE / NOMIS
+Richmond upon Thames,E09000027,2011,665.0,Value published,ONS ASHE / NOMIS
+Southwark,E09000028,2011,530.5,Value published,ONS ASHE / NOMIS
+Sutton,E09000029,2011,497.9,Value published,ONS ASHE / NOMIS
+Tower Hamlets,E09000030,2011,542.3,Value published,ONS ASHE / NOMIS
+Waltham Forest,E09000031,2011,464.4,Value published,ONS ASHE / NOMIS
+Wandsworth,E09000032,2011,651.6,Value published,ONS ASHE / NOMIS
+Westminster,E09000033,2011,670.8,Value published,ONS ASHE / NOMIS
+Barking and Dagenham,E09000002,2012,450.0,Value published,ONS ASHE / NOMIS
+Barnet,E09000003,2012,503.1,Value published,ONS ASHE / NOMIS
+Bexley,E09000004,2012,509.1,Value published,ONS ASHE / NOMIS
+Brent,E09000005,2012,442.0,Value published,ONS ASHE / NOMIS
+Bromley,E09000006,2012,566.6,Value published,ONS ASHE / NOMIS
+Camden,E09000007,2012,612.0,Value published,ONS ASHE / NOMIS
+City of London,E09000001,2012,,Value not published / suppressed,ONS ASHE / NOMIS
+Croydon,E09000008,2012,493.2,Value published,ONS ASHE / NOMIS
+Ealing,E09000009,2012,495.0,Value published,ONS ASHE / NOMIS
+Enfield,E09000010,2012,455.4,Value published,ONS ASHE / NOMIS
+Greenwich,E09000011,2012,470.5,Value published,ONS ASHE / NOMIS
+Hackney,E09000012,2012,511.4,Value published,ONS ASHE / NOMIS
+Hammersmith and Fulham,E09000013,2012,613.3,Value published,ONS ASHE / NOMIS
+Haringey,E09000014,2012,489.1,Value published,ONS ASHE / NOMIS
+Harrow,E09000015,2012,471.7,Value published,ONS ASHE / NOMIS
+Havering,E09000016,2012,500.9,Value published,ONS ASHE / NOMIS
+Hillingdon,E09000017,2012,509.7,Value published,ONS ASHE / NOMIS
+Hounslow,E09000018,2012,479.1,Value published,ONS ASHE / NOMIS
+Islington,E09000019,2012,605.1,Value published,ONS ASHE / NOMIS
+Kensington and Chelsea,E09000020,2012,655.0,Value published,ONS ASHE / NOMIS
+Kingston upon Thames,E09000021,2012,601.1,Value published,ONS ASHE / NOMIS
+Lambeth,E09000022,2012,574.8,Value published,ONS ASHE / NOMIS
+Lewisham,E09000023,2012,499.6,Value published,ONS ASHE / NOMIS
+Merton,E09000024,2012,538.4,Value published,ONS ASHE / NOMIS
+Newham,E09000025,2012,369.8,Value published,ONS ASHE / NOMIS
+Redbridge,E09000026,2012,526.7,Value published,ONS ASHE / NOMIS
+Richmond upon Thames,E09000027,2012,670.8,Value published,ONS ASHE / NOMIS
+Southwark,E09000028,2012,536.6,Value published,ONS ASHE / NOMIS
+Sutton,E09000029,2012,517.5,Value published,ONS ASHE / NOMIS
+Tower Hamlets,E09000030,2012,566.8,Value published,ONS ASHE / NOMIS
+Waltham Forest,E09000031,2012,472.6,Value published,ONS ASHE / NOMIS
+Wandsworth,E09000032,2012,632.3,Value published,ONS ASHE / NOMIS
+Westminster,E09000033,2012,701.0,Value published,ONS ASHE / NOMIS
+Barking and Dagenham,E09000002,2013,441.2,Value published,ONS ASHE / NOMIS
+Barnet,E09000003,2013,517.5,Value published,ONS ASHE / NOMIS
+Bexley,E09000004,2013,497.9,Value published,ONS ASHE / NOMIS
+Brent,E09000005,2013,441.8,Value published,ONS ASHE / NOMIS
+Bromley,E09000006,2013,581.1,Value published,ONS ASHE / NOMIS
+Camden,E09000007,2013,629.5,Value published,ONS ASHE / NOMIS
+City of London,E09000001,2013,,Value not published / suppressed,ONS ASHE / NOMIS
+Croydon,E09000008,2013,481.4,Value published,ONS ASHE / NOMIS
+Ealing,E09000009,2013,502.1,Value published,ONS ASHE / NOMIS
+Enfield,E09000010,2013,450.3,Value published,ONS ASHE / NOMIS
+Greenwich,E09000011,2013,516.5,Value published,ONS ASHE / NOMIS
+Hackney,E09000012,2013,519.0,Value published,ONS ASHE / NOMIS
+Hammersmith and Fulham,E09000013,2013,610.7,Value published,ONS ASHE / NOMIS
+Haringey,E09000014,2013,464.6,Value published,ONS ASHE / NOMIS
+Harrow,E09000015,2013,478.9,Value published,ONS ASHE / NOMIS
+Havering,E09000016,2013,489.7,Value published,ONS ASHE / NOMIS
+Hillingdon,E09000017,2013,522.2,Value published,ONS ASHE / NOMIS
+Hounslow,E09000018,2013,479.1,Value published,ONS ASHE / NOMIS
+Islington,E09000019,2013,606.0,Value published,ONS ASHE / NOMIS
+Kensington and Chelsea,E09000020,2013,726.7,Value published,ONS ASHE / NOMIS
+Kingston upon Thames,E09000021,2013,604.2,Value published,ONS ASHE / NOMIS
+Lambeth,E09000022,2013,536.6,Value published,ONS ASHE / NOMIS
+Lewisham,E09000023,2013,525.5,Value published,ONS ASHE / NOMIS
+Merton,E09000024,2013,527.0,Value published,ONS ASHE / NOMIS
+Newham,E09000025,2013,387.6,Value published,ONS ASHE / NOMIS
+Redbridge,E09000026,2013,503.9,Value published,ONS ASHE / NOMIS
+Richmond upon Thames,E09000027,2013,670.5,Value published,ONS ASHE / NOMIS
+Southwark,E09000028,2013,524.4,Value published,ONS ASHE / NOMIS
+Sutton,E09000029,2013,518.0,Value published,ONS ASHE / NOMIS
+Tower Hamlets,E09000030,2013,575.1,Value published,ONS ASHE / NOMIS
+Waltham Forest,E09000031,2013,441.8,Value published,ONS ASHE / NOMIS
+Wandsworth,E09000032,2013,644.1,Value published,ONS ASHE / NOMIS
+Westminster,E09000033,2013,625.0,Value published,ONS ASHE / NOMIS
+Barking and Dagenham,E09000002,2014,422.5,Value published,ONS ASHE / NOMIS
+Barnet,E09000003,2014,479.1,Value published,ONS ASHE / NOMIS
+Bexley,E09000004,2014,512.6,Value published,ONS ASHE / NOMIS
+Brent,E09000005,2014,441.8,Value published,ONS ASHE / NOMIS
+Bromley,E09000006,2014,578.5,Value published,ONS ASHE / NOMIS
+Camden,E09000007,2014,613.1,Value published,ONS ASHE / NOMIS
+City of London,E09000001,2014,,Value not published / suppressed,ONS ASHE / NOMIS
+Croydon,E09000008,2014,499.0,Value published,ONS ASHE / NOMIS
+Ealing,E09000009,2014,498.4,Value published,ONS ASHE / NOMIS
+Enfield,E09000010,2014,462.8,Value published,ONS ASHE / NOMIS
+Greenwich,E09000011,2014,509.1,Value published,ONS ASHE / NOMIS
+Hackney,E09000012,2014,513.0,Value published,ONS ASHE / NOMIS
+Hammersmith and Fulham,E09000013,2014,609.9,Value published,ONS ASHE / NOMIS
+Haringey,E09000014,2014,467.7,Value published,ONS ASHE / NOMIS
+Harrow,E09000015,2014,492.3,Value published,ONS ASHE / NOMIS
+Havering,E09000016,2014,499.1,Value published,ONS ASHE / NOMIS
+Hillingdon,E09000017,2014,492.5,Value published,ONS ASHE / NOMIS
+Hounslow,E09000018,2014,463.5,Value published,ONS ASHE / NOMIS
+Islington,E09000019,2014,613.5,Value published,ONS ASHE / NOMIS
+Kensington and Chelsea,E09000020,2014,641.3,Value published,ONS ASHE / NOMIS
+Kingston upon Thames,E09000021,2014,556.5,Value published,ONS ASHE / NOMIS
+Lambeth,E09000022,2014,547.0,Value published,ONS ASHE / NOMIS
+Lewisham,E09000023,2014,518.5,Value published,ONS ASHE / NOMIS
+Merton,E09000024,2014,542.9,Value published,ONS ASHE / NOMIS
+Newham,E09000025,2014,393.7,Value published,ONS ASHE / NOMIS
+Redbridge,E09000026,2014,517.6,Value published,ONS ASHE / NOMIS
+Richmond upon Thames,E09000027,2014,654.2,Value published,ONS ASHE / NOMIS
+Southwark,E09000028,2014,529.0,Value published,ONS ASHE / NOMIS
+Sutton,E09000029,2014,508.3,Value published,ONS ASHE / NOMIS
+Tower Hamlets,E09000030,2014,574.9,Value published,ONS ASHE / NOMIS
+Waltham Forest,E09000031,2014,444.8,Value published,ONS ASHE / NOMIS
+Wandsworth,E09000032,2014,661.1,Value published,ONS ASHE / NOMIS
+Westminster,E09000033,2014,659.6,Value published,ONS ASHE / NOMIS
+Barking and Dagenham,E09000002,2015,436.6,Value published,ONS ASHE / NOMIS
+Barnet,E09000003,2015,491.0,Value published,ONS ASHE / NOMIS
+Bexley,E09000004,2015,491.1,Value published,ONS ASHE / NOMIS
+Brent,E09000005,2015,457.6,Value published,ONS ASHE / NOMIS
+Bromley,E09000006,2015,583.8,Value published,ONS ASHE / NOMIS
+Camden,E09000007,2015,588.1,Value published,ONS ASHE / NOMIS
+City of London,E09000001,2015,,Value not published / suppressed,ONS ASHE / NOMIS
+Croydon,E09000008,2015,492.2,Value published,ONS ASHE / NOMIS
+Ealing,E09000009,2015,495.7,Value published,ONS ASHE / NOMIS
+Enfield,E09000010,2015,473.6,Value published,ONS ASHE / NOMIS
+Greenwich,E09000011,2015,532.5,Value published,ONS ASHE / NOMIS
+Hackney,E09000012,2015,534.5,Value published,ONS ASHE / NOMIS
+Hammersmith and Fulham,E09000013,2015,646.7,Value published,ONS ASHE / NOMIS
+Haringey,E09000014,2015,500.0,Value published,ONS ASHE / NOMIS
+Harrow,E09000015,2015,505.1,Value published,ONS ASHE / NOMIS
+Havering,E09000016,2015,517.5,Value published,ONS ASHE / NOMIS
+Hillingdon,E09000017,2015,498.8,Value published,ONS ASHE / NOMIS
+Hounslow,E09000018,2015,495.6,Value published,ONS ASHE / NOMIS
+Islington,E09000019,2015,603.7,Value published,ONS ASHE / NOMIS
+Kensington and Chelsea,E09000020,2015,632.4,Value published,ONS ASHE / NOMIS
+Kingston upon Thames,E09000021,2015,574.6,Value published,ONS ASHE / NOMIS
+Lambeth,E09000022,2015,542.9,Value published,ONS ASHE / NOMIS
+Lewisham,E09000023,2015,517.5,Value published,ONS ASHE / NOMIS
+Merton,E09000024,2015,548.1,Value published,ONS ASHE / NOMIS
+Newham,E09000025,2015,421.6,Value published,ONS ASHE / NOMIS
+Redbridge,E09000026,2015,533.1,Value published,ONS ASHE / NOMIS
+Richmond upon Thames,E09000027,2015,648.0,Value published,ONS ASHE / NOMIS
+Southwark,E09000028,2015,557.0,Value published,ONS ASHE / NOMIS
+Sutton,E09000029,2015,498.3,Value published,ONS ASHE / NOMIS
+Tower Hamlets,E09000030,2015,554.9,Value published,ONS ASHE / NOMIS
+Waltham Forest,E09000031,2015,476.3,Value published,ONS ASHE / NOMIS
+Wandsworth,E09000032,2015,670.1,Value published,ONS ASHE / NOMIS
+Westminster,E09000033,2015,656.0,Value published,ONS ASHE / NOMIS
+Barking and Dagenham,E09000002,2016,462.2,Value published,ONS ASHE / NOMIS
+Barnet,E09000003,2016,485.6,Value published,ONS ASHE / NOMIS
+Bexley,E09000004,2016,487.0,Value published,ONS ASHE / NOMIS
+Brent,E09000005,2016,467.0,Value published,ONS ASHE / NOMIS
+Bromley,E09000006,2016,584.3,Value published,ONS ASHE / NOMIS
+Camden,E09000007,2016,632.5,Value published,ONS ASHE / NOMIS
+City of London,E09000001,2016,,Value not published / suppressed,ONS ASHE / NOMIS
+Croydon,E09000008,2016,512.3,Value published,ONS ASHE / NOMIS
+Ealing,E09000009,2016,498.3,Value published,ONS ASHE / NOMIS
+Enfield,E09000010,2016,463.9,Value published,ONS ASHE / NOMIS
+Greenwich,E09000011,2016,539.3,Value published,ONS ASHE / NOMIS
+Hackney,E09000012,2016,527.8,Value published,ONS ASHE / NOMIS
+Hammersmith and Fulham,E09000013,2016,641.9,Value published,ONS ASHE / NOMIS
+Haringey,E09000014,2016,481.9,Value published,ONS ASHE / NOMIS
+Harrow,E09000015,2016,522.8,Value published,ONS ASHE / NOMIS
+Havering,E09000016,2016,532.6,Value published,ONS ASHE / NOMIS
+Hillingdon,E09000017,2016,499.8,Value published,ONS ASHE / NOMIS
+Hounslow,E09000018,2016,500.9,Value published,ONS ASHE / NOMIS
+Islington,E09000019,2016,613.3,Value published,ONS ASHE / NOMIS
+Kensington and Chelsea,E09000020,2016,651.6,Value published,ONS ASHE / NOMIS
+Kingston upon Thames,E09000021,2016,566.7,Value published,ONS ASHE / NOMIS
+Lambeth,E09000022,2016,551.7,Value published,ONS ASHE / NOMIS
+Lewisham,E09000023,2016,520.6,Value published,ONS ASHE / NOMIS
+Merton,E09000024,2016,585.3,Value published,ONS ASHE / NOMIS
+Newham,E09000025,2016,436.7,Value published,ONS ASHE / NOMIS
+Redbridge,E09000026,2016,521.8,Value published,ONS ASHE / NOMIS
+Richmond upon Thames,E09000027,2016,688.8,Value published,ONS ASHE / NOMIS
+Southwark,E09000028,2016,543.0,Value published,ONS ASHE / NOMIS
+Sutton,E09000029,2016,532.9,Value published,ONS ASHE / NOMIS
+Tower Hamlets,E09000030,2016,557.9,Value published,ONS ASHE / NOMIS
+Waltham Forest,E09000031,2016,483.4,Value published,ONS ASHE / NOMIS
+Wandsworth,E09000032,2016,684.7,Value published,ONS ASHE / NOMIS
+Westminster,E09000033,2016,667.5,Value published,ONS ASHE / NOMIS
+Barking and Dagenham,E09000002,2017,461.0,Value published,ONS ASHE / NOMIS
+Barnet,E09000003,2017,522.6,Value published,ONS ASHE / NOMIS
+Bexley,E09000004,2017,513.0,Value published,ONS ASHE / NOMIS
+Brent,E09000005,2017,471.0,Value published,ONS ASHE / NOMIS
+Bromley,E09000006,2017,608.0,Value published,ONS ASHE / NOMIS
+Camden,E09000007,2017,614.3,Value published,ONS ASHE / NOMIS
+City of London,E09000001,2017,,Value not published / suppressed,ONS ASHE / NOMIS
+Croydon,E09000008,2017,538.5,Value published,ONS ASHE / NOMIS
+Ealing,E09000009,2017,517.2,Value published,ONS ASHE / NOMIS
+Enfield,E09000010,2017,479.8,Value published,ONS ASHE / NOMIS
+Greenwich,E09000011,2017,553.0,Value published,ONS ASHE / NOMIS
+Hackney,E09000012,2017,558.1,Value published,ONS ASHE / NOMIS
+Hammersmith and Fulham,E09000013,2017,651.1,Value published,ONS ASHE / NOMIS
+Haringey,E09000014,2017,525.3,Value published,ONS ASHE / NOMIS
+Harrow,E09000015,2017,543.4,Value published,ONS ASHE / NOMIS
+Havering,E09000016,2017,534.2,Value published,ONS ASHE / NOMIS
+Hillingdon,E09000017,2017,500.4,Value published,ONS ASHE / NOMIS
+Hounslow,E09000018,2017,517.0,Value published,ONS ASHE / NOMIS
+Islington,E09000019,2017,646.1,Value published,ONS ASHE / NOMIS
+Kensington and Chelsea,E09000020,2017,784.4,Value published,ONS ASHE / NOMIS
+Kingston upon Thames,E09000021,2017,579.9,Value published,ONS ASHE / NOMIS
+Lambeth,E09000022,2017,594.6,Value published,ONS ASHE / NOMIS
+Lewisham,E09000023,2017,535.2,Value published,ONS ASHE / NOMIS
+Merton,E09000024,2017,573.0,Value published,ONS ASHE / NOMIS
+Newham,E09000025,2017,471.3,Value published,ONS ASHE / NOMIS
+Redbridge,E09000026,2017,546.8,Value published,ONS ASHE / NOMIS
+Richmond upon Thames,E09000027,2017,665.9,Value published,ONS ASHE / NOMIS
+Southwark,E09000028,2017,587.1,Value published,ONS ASHE / NOMIS
+Sutton,E09000029,2017,515.2,Value published,ONS ASHE / NOMIS
+Tower Hamlets,E09000030,2017,592.0,Value published,ONS ASHE / NOMIS
+Waltham Forest,E09000031,2017,499.4,Value published,ONS ASHE / NOMIS
+Wandsworth,E09000032,2017,681.2,Value published,ONS ASHE / NOMIS
+Westminster,E09000033,2017,730.8,Value published,ONS ASHE / NOMIS
+Barking and Dagenham,E09000002,2018,479.1,Value published,ONS ASHE / NOMIS
+Barnet,E09000003,2018,536.6,Value published,ONS ASHE / NOMIS
+Bexley,E09000004,2018,512.7,Value published,ONS ASHE / NOMIS
+Brent,E09000005,2018,479.9,Value published,ONS ASHE / NOMIS
+Bromley,E09000006,2018,632.7,Value published,ONS ASHE / NOMIS
+Camden,E09000007,2018,634.4,Value published,ONS ASHE / NOMIS
+City of London,E09000001,2018,909.4,Value published,ONS ASHE / NOMIS
+Croydon,E09000008,2018,550.6,Value published,ONS ASHE / NOMIS
+Ealing,E09000009,2018,524.3,Value published,ONS ASHE / NOMIS
+Enfield,E09000010,2018,464.8,Value published,ONS ASHE / NOMIS
+Greenwich,E09000011,2018,566.0,Value published,ONS ASHE / NOMIS
+Hackney,E09000012,2018,555.4,Value published,ONS ASHE / NOMIS
+Hammersmith and Fulham,E09000013,2018,682.0,Value published,ONS ASHE / NOMIS
+Haringey,E09000014,2018,551.4,Value published,ONS ASHE / NOMIS
+Harrow,E09000015,2018,534.9,Value published,ONS ASHE / NOMIS
+Havering,E09000016,2018,544.8,Value published,ONS ASHE / NOMIS
+Hillingdon,E09000017,2018,531.7,Value published,ONS ASHE / NOMIS
+Hounslow,E09000018,2018,533.6,Value published,ONS ASHE / NOMIS
+Islington,E09000019,2018,687.7,Value published,ONS ASHE / NOMIS
+Kensington and Chelsea,E09000020,2018,670.6,Value published,ONS ASHE / NOMIS
+Kingston upon Thames,E09000021,2018,629.7,Value published,ONS ASHE / NOMIS
+Lambeth,E09000022,2018,617.1,Value published,ONS ASHE / NOMIS
+Lewisham,E09000023,2018,551.2,Value published,ONS ASHE / NOMIS
+Merton,E09000024,2018,594.1,Value published,ONS ASHE / NOMIS
+Newham,E09000025,2018,475.9,Value published,ONS ASHE / NOMIS
+Redbridge,E09000026,2018,555.8,Value published,ONS ASHE / NOMIS
+Richmond upon Thames,E09000027,2018,677.6,Value published,ONS ASHE / NOMIS
+Southwark,E09000028,2018,589.4,Value published,ONS ASHE / NOMIS
+Sutton,E09000029,2018,548.7,Value published,ONS ASHE / NOMIS
+Tower Hamlets,E09000030,2018,627.6,Value published,ONS ASHE / NOMIS
+Waltham Forest,E09000031,2018,529.7,Value published,ONS ASHE / NOMIS
+Wandsworth,E09000032,2018,695.7,Value published,ONS ASHE / NOMIS
+Westminster,E09000033,2018,757.1,Value published,ONS ASHE / NOMIS
+Barking and Dagenham,E09000002,2019,471.0,Value published,ONS ASHE / NOMIS
+Barnet,E09000003,2019,536.4,Value published,ONS ASHE / NOMIS
+Bexley,E09000004,2019,553.4,Value published,ONS ASHE / NOMIS
+Brent,E09000005,2019,524.0,Value published,ONS ASHE / NOMIS
+Bromley,E09000006,2019,638.3,Value published,ONS ASHE / NOMIS
+Camden,E09000007,2019,662.0,Value published,ONS ASHE / NOMIS
+City of London,E09000001,2019,,Value not published / suppressed,ONS ASHE / NOMIS
+Croydon,E09000008,2019,561.7,Value published,ONS ASHE / NOMIS
+Ealing,E09000009,2019,532.2,Value published,ONS ASHE / NOMIS
+Enfield,E09000010,2019,490.1,Value published,ONS ASHE / NOMIS
+Greenwich,E09000011,2019,579.5,Value published,ONS ASHE / NOMIS
+Hackney,E09000012,2019,574.9,Value published,ONS ASHE / NOMIS
+Hammersmith and Fulham,E09000013,2019,728.0,Value published,ONS ASHE / NOMIS
+Haringey,E09000014,2019,547.6,Value published,ONS ASHE / NOMIS
+Harrow,E09000015,2019,581.9,Value published,ONS ASHE / NOMIS
+Havering,E09000016,2019,568.5,Value published,ONS ASHE / NOMIS
+Hillingdon,E09000017,2019,545.9,Value published,ONS ASHE / NOMIS
+Hounslow,E09000018,2019,547.6,Value published,ONS ASHE / NOMIS
+Islington,E09000019,2019,699.1,Value published,ONS ASHE / NOMIS
+Kensington and Chelsea,E09000020,2019,763.7,Value published,ONS ASHE / NOMIS
+Kingston upon Thames,E09000021,2019,628.0,Value published,ONS ASHE / NOMIS
+Lambeth,E09000022,2019,634.8,Value published,ONS ASHE / NOMIS
+Lewisham,E09000023,2019,552.0,Value published,ONS ASHE / NOMIS
+Merton,E09000024,2019,578.9,Value published,ONS ASHE / NOMIS
+Newham,E09000025,2019,517.5,Value published,ONS ASHE / NOMIS
+Redbridge,E09000026,2019,565.6,Value published,ONS ASHE / NOMIS
+Richmond upon Thames,E09000027,2019,721.1,Value published,ONS ASHE / NOMIS
+Southwark,E09000028,2019,628.0,Value published,ONS ASHE / NOMIS
+Sutton,E09000029,2019,549.0,Value published,ONS ASHE / NOMIS
+Tower Hamlets,E09000030,2019,688.9,Value published,ONS ASHE / NOMIS
+Waltham Forest,E09000031,2019,574.9,Value published,ONS ASHE / NOMIS
+Wandsworth,E09000032,2019,720.9,Value published,ONS ASHE / NOMIS
+Westminster,E09000033,2019,703.9,Value published,ONS ASHE / NOMIS
+Barking and Dagenham,E09000002,2020,486.7,Value published,ONS ASHE / NOMIS
+Barnet,E09000003,2020,538.8,Value published,ONS ASHE / NOMIS
+Bexley,E09000004,2020,566.5,Value published,ONS ASHE / NOMIS
+Brent,E09000005,2020,531.8,Value published,ONS ASHE / NOMIS
+Bromley,E09000006,2020,613.2,Value published,ONS ASHE / NOMIS
+Camden,E09000007,2020,623.0,Value published,ONS ASHE / NOMIS
+City of London,E09000001,2020,,Value not published / suppressed,ONS ASHE / NOMIS
+Croydon,E09000008,2020,565.1,Value published,ONS ASHE / NOMIS
+Ealing,E09000009,2020,566.8,Value published,ONS ASHE / NOMIS
+Enfield,E09000010,2020,492.6,Value published,ONS ASHE / NOMIS
+Greenwich,E09000011,2020,573.1,Value published,ONS ASHE / NOMIS
+Hackney,E09000012,2020,574.9,Value published,ONS ASHE / NOMIS
+Hammersmith and Fulham,E09000013,2020,713.1,Value published,ONS ASHE / NOMIS
+Haringey,E09000014,2020,567.8,Value published,ONS ASHE / NOMIS
+Harrow,E09000015,2020,570.5,Value published,ONS ASHE / NOMIS
+Havering,E09000016,2020,574.9,Value published,ONS ASHE / NOMIS
+Hillingdon,E09000017,2020,560.9,Value published,ONS ASHE / NOMIS
+Hounslow,E09000018,2020,511.8,Value published,ONS ASHE / NOMIS
+Islington,E09000019,2020,690.1,Value published,ONS ASHE / NOMIS
+Kensington and Chelsea,E09000020,2020,802.0,Value published,ONS ASHE / NOMIS
+Kingston upon Thames,E09000021,2020,617.3,Value published,ONS ASHE / NOMIS
+Lambeth,E09000022,2020,670.8,Value published,ONS ASHE / NOMIS
+Lewisham,E09000023,2020,574.9,Value published,ONS ASHE / NOMIS
+Merton,E09000024,2020,578.3,Value published,ONS ASHE / NOMIS
+Newham,E09000025,2020,534.4,Value published,ONS ASHE / NOMIS
+Redbridge,E09000026,2020,581.6,Value published,ONS ASHE / NOMIS
+Richmond upon Thames,E09000027,2020,702.9,Value published,ONS ASHE / NOMIS
+Southwark,E09000028,2020,620.9,Value published,ONS ASHE / NOMIS
+Sutton,E09000029,2020,543.3,Value published,ONS ASHE / NOMIS
+Tower Hamlets,E09000030,2020,665.0,Value published,ONS ASHE / NOMIS
+Waltham Forest,E09000031,2020,596.8,Value published,ONS ASHE / NOMIS
+Wandsworth,E09000032,2020,755.2,Value published,ONS ASHE / NOMIS
+Westminster,E09000033,2020,701.1,Value published,ONS ASHE / NOMIS
+Barking and Dagenham,E09000002,2021,508.7,Value published,ONS ASHE / NOMIS
+Barnet,E09000003,2021,574.9,Value published,ONS ASHE / NOMIS
+Bexley,E09000004,2021,586.6,Value published,ONS ASHE / NOMIS
+Brent,E09000005,2021,555.7,Value published,ONS ASHE / NOMIS
+Bromley,E09000006,2021,666.6,Value published,ONS ASHE / NOMIS
+Camden,E09000007,2021,695.0,Value published,ONS ASHE / NOMIS
+City of London,E09000001,2021,,Value not published / suppressed,ONS ASHE / NOMIS
+Croydon,E09000008,2021,613.3,Value published,ONS ASHE / NOMIS
+Ealing,E09000009,2021,582.6,Value published,ONS ASHE / NOMIS
+Enfield,E09000010,2021,521.5,Value published,ONS ASHE / NOMIS
+Greenwich,E09000011,2021,618.3,Value published,ONS ASHE / NOMIS
+Hackney,E09000012,2021,576.8,Value published,ONS ASHE / NOMIS
+Hammersmith and Fulham,E09000013,2021,727.0,Value published,ONS ASHE / NOMIS
+Haringey,E09000014,2021,546.0,Value published,ONS ASHE / NOMIS
+Harrow,E09000015,2021,580.2,Value published,ONS ASHE / NOMIS
+Havering,E09000016,2021,585.7,Value published,ONS ASHE / NOMIS
+Hillingdon,E09000017,2021,594.8,Value published,ONS ASHE / NOMIS
+Hounslow,E09000018,2021,567.2,Value published,ONS ASHE / NOMIS
+Islington,E09000019,2021,670.7,Value published,ONS ASHE / NOMIS
+Kensington and Chelsea,E09000020,2021,763.6,Value published,ONS ASHE / NOMIS
+Kingston upon Thames,E09000021,2021,667.9,Value published,ONS ASHE / NOMIS
+Lambeth,E09000022,2021,681.2,Value published,ONS ASHE / NOMIS
+Lewisham,E09000023,2021,574.9,Value published,ONS ASHE / NOMIS
+Merton,E09000024,2021,592.1,Value published,ONS ASHE / NOMIS
+Newham,E09000025,2021,574.9,Value published,ONS ASHE / NOMIS
+Redbridge,E09000026,2021,579.3,Value published,ONS ASHE / NOMIS
+Richmond upon Thames,E09000027,2021,704.5,Value published,ONS ASHE / NOMIS
+Southwark,E09000028,2021,637.8,Value published,ONS ASHE / NOMIS
+Sutton,E09000029,2021,576.9,Value published,ONS ASHE / NOMIS
+Tower Hamlets,E09000030,2021,685.2,Value published,ONS ASHE / NOMIS
+Waltham Forest,E09000031,2021,629.6,Value published,ONS ASHE / NOMIS
+Wandsworth,E09000032,2021,746.0,Value published,ONS ASHE / NOMIS
+Westminster,E09000033,2021,771.1,Value published,ONS ASHE / NOMIS
+Barking and Dagenham,E09000002,2022,536.6,Value published,ONS ASHE / NOMIS
+Barnet,E09000003,2022,624.3,Value published,ONS ASHE / NOMIS
+Bexley,E09000004,2022,634.4,Value published,ONS ASHE / NOMIS
+Brent,E09000005,2022,556.6,Value published,ONS ASHE / NOMIS
+Bromley,E09000006,2022,704.2,Value published,ONS ASHE / NOMIS
+Camden,E09000007,2022,699.2,Value published,ONS ASHE / NOMIS
+City of London,E09000001,2022,,Value not published / suppressed,ONS ASHE / NOMIS
+Croydon,E09000008,2022,667.0,Value published,ONS ASHE / NOMIS
+Ealing,E09000009,2022,597.4,Value published,ONS ASHE / NOMIS
+Enfield,E09000010,2022,562.0,Value published,ONS ASHE / NOMIS
+Greenwich,E09000011,2022,657.4,Value published,ONS ASHE / NOMIS
+Hackney,E09000012,2022,632.8,Value published,ONS ASHE / NOMIS
+Hammersmith and Fulham,E09000013,2022,732.6,Value published,ONS ASHE / NOMIS
+Haringey,E09000014,2022,604.3,Value published,ONS ASHE / NOMIS
+Harrow,E09000015,2022,619.6,Value published,ONS ASHE / NOMIS
+Havering,E09000016,2022,612.9,Value published,ONS ASHE / NOMIS
+Hillingdon,E09000017,2022,629.6,Value published,ONS ASHE / NOMIS
+Hounslow,E09000018,2022,604.1,Value published,ONS ASHE / NOMIS
+Islington,E09000019,2022,701.4,Value published,ONS ASHE / NOMIS
+Kensington and Chelsea,E09000020,2022,719.1,Value published,ONS ASHE / NOMIS
+Kingston upon Thames,E09000021,2022,668.1,Value published,ONS ASHE / NOMIS
+Lambeth,E09000022,2022,703.0,Value published,ONS ASHE / NOMIS
+Lewisham,E09000023,2022,608.4,Value published,ONS ASHE / NOMIS
+Merton,E09000024,2022,584.4,Value published,ONS ASHE / NOMIS
+Newham,E09000025,2022,574.9,Value published,ONS ASHE / NOMIS
+Redbridge,E09000026,2022,581.7,Value published,ONS ASHE / NOMIS
+Richmond upon Thames,E09000027,2022,709.3,Value published,ONS ASHE / NOMIS
+Southwark,E09000028,2022,672.3,Value published,ONS ASHE / NOMIS
+Sutton,E09000029,2022,577.3,Value published,ONS ASHE / NOMIS
+Tower Hamlets,E09000030,2022,725.2,Value published,ONS ASHE / NOMIS
+Waltham Forest,E09000031,2022,647.0,Value published,ONS ASHE / NOMIS
+Wandsworth,E09000032,2022,835.8,Value published,ONS ASHE / NOMIS
+Westminster,E09000033,2022,738.5,Value published,ONS ASHE / NOMIS
+Barking and Dagenham,E09000002,2023,558.4,Value published,ONS ASHE / NOMIS
+Barnet,E09000003,2023,633.1,Value published,ONS ASHE / NOMIS
+Bexley,E09000004,2023,680.2,Value published,ONS ASHE / NOMIS
+Brent,E09000005,2023,634.6,Value published,ONS ASHE / NOMIS
+Bromley,E09000006,2023,718.0,Value published,ONS ASHE / NOMIS
+Camden,E09000007,2023,732.1,Value published,ONS ASHE / NOMIS
+City of London,E09000001,2023,,Value not published / suppressed,ONS ASHE / NOMIS
+Croydon,E09000008,2023,678.0,Value published,ONS ASHE / NOMIS
+Ealing,E09000009,2023,623.1,Value published,ONS ASHE / NOMIS
+Enfield,E09000010,2023,598.2,Value published,ONS ASHE / NOMIS
+Greenwich,E09000011,2023,719.4,Value published,ONS ASHE / NOMIS
+Hackney,E09000012,2023,667.7,Value published,ONS ASHE / NOMIS
+Hammersmith and Fulham,E09000013,2023,790.1,Value published,ONS ASHE / NOMIS
+Haringey,E09000014,2023,668.4,Value published,ONS ASHE / NOMIS
+Harrow,E09000015,2023,625.2,Value published,ONS ASHE / NOMIS
+Havering,E09000016,2023,670.7,Value published,ONS ASHE / NOMIS
+Hillingdon,E09000017,2023,677.5,Value published,ONS ASHE / NOMIS
+Hounslow,E09000018,2023,637.9,Value published,ONS ASHE / NOMIS
+Islington,E09000019,2023,766.6,Value published,ONS ASHE / NOMIS
+Kensington and Chelsea,E09000020,2023,855.9,Value published,ONS ASHE / NOMIS
+Kingston upon Thames,E09000021,2023,684.3,Value published,ONS ASHE / NOMIS
+Lambeth,E09000022,2023,774.1,Value published,ONS ASHE / NOMIS
+Lewisham,E09000023,2023,662.3,Value published,ONS ASHE / NOMIS
+Merton,E09000024,2023,745.3,Value published,ONS ASHE / NOMIS
+Newham,E09000025,2023,633.9,Value published,ONS ASHE / NOMIS
+Redbridge,E09000026,2023,632.7,Value published,ONS ASHE / NOMIS
+Richmond upon Thames,E09000027,2023,749.5,Value published,ONS ASHE / NOMIS
+Southwark,E09000028,2023,731.5,Value published,ONS ASHE / NOMIS
+Sutton,E09000029,2023,635.1,Value published,ONS ASHE / NOMIS
+Tower Hamlets,E09000030,2023,785.8,Value published,ONS ASHE / NOMIS
+Waltham Forest,E09000031,2023,683.5,Value published,ONS ASHE / NOMIS
+Wandsworth,E09000032,2023,844.7,Value published,ONS ASHE / NOMIS
+Westminster,E09000033,2023,767.5,Value published,ONS ASHE / NOMIS
+Barking and Dagenham,E09000002,2024,612.9,Value published,ONS ASHE / NOMIS
+Barnet,E09000003,2024,714.6,Value published,ONS ASHE / NOMIS
+Bexley,E09000004,2024,694.4,Value published,ONS ASHE / NOMIS
+Brent,E09000005,2024,646.2,Value published,ONS ASHE / NOMIS
+Bromley,E09000006,2024,818.9,Value published,ONS ASHE / NOMIS
+Camden,E09000007,2024,766.6,Value published,ONS ASHE / NOMIS
+City of London,E09000001,2024,,Value not published / suppressed,ONS ASHE / NOMIS
+Croydon,E09000008,2024,721.3,Value published,ONS ASHE / NOMIS
+Ealing,E09000009,2024,684.8,Value published,ONS ASHE / NOMIS
+Enfield,E09000010,2024,646.2,Value published,ONS ASHE / NOMIS
+Greenwich,E09000011,2024,749.6,Value published,ONS ASHE / NOMIS
+Hackney,E09000012,2024,762.5,Value published,ONS ASHE / NOMIS
+Hammersmith and Fulham,E09000013,2024,798.5,Value published,ONS ASHE / NOMIS
+Haringey,E09000014,2024,727.8,Value published,ONS ASHE / NOMIS
+Harrow,E09000015,2024,669.2,Value published,ONS ASHE / NOMIS
+Havering,E09000016,2024,710.8,Value published,ONS ASHE / NOMIS
+Hillingdon,E09000017,2024,689.9,Value published,ONS ASHE / NOMIS
+Hounslow,E09000018,2024,659.3,Value published,ONS ASHE / NOMIS
+Islington,E09000019,2024,811.2,Value published,ONS ASHE / NOMIS
+Kensington and Chelsea,E09000020,2024,810.1,Value published,ONS ASHE / NOMIS
+Kingston upon Thames,E09000021,2024,727.4,Value published,ONS ASHE / NOMIS
+Lambeth,E09000022,2024,797.4,Value published,ONS ASHE / NOMIS
+Lewisham,E09000023,2024,706.4,Value published,ONS ASHE / NOMIS
+Merton,E09000024,2024,721.6,Value published,ONS ASHE / NOMIS
+Newham,E09000025,2024,635.9,Value published,ONS ASHE / NOMIS
+Redbridge,E09000026,2024,669.0,Value published,ONS ASHE / NOMIS
+Richmond upon Thames,E09000027,2024,824.0,Value published,ONS ASHE / NOMIS
+Southwark,E09000028,2024,788.6,Value published,ONS ASHE / NOMIS
+Sutton,E09000029,2024,728.7,Value published,ONS ASHE / NOMIS
+Tower Hamlets,E09000030,2024,766.5,Value published,ONS ASHE / NOMIS
+Waltham Forest,E09000031,2024,717.7,Value published,ONS ASHE / NOMIS
+Wandsworth,E09000032,2024,843.3,Value published,ONS ASHE / NOMIS
+Westminster,E09000033,2024,843.3,Value published,ONS ASHE / NOMIS
