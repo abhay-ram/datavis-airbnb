@@ -22,6 +22,8 @@ DIST = os.path.join(ROOT, sys.argv[1] if len(sys.argv) > 1 else "dist")
 CORE_CSS = os.path.join(SRC, "theme.css")
 CORE_JS = os.path.join(SRC, "core.js")
 DATA_JS = os.path.join(SRC, "generated", "data.js")
+DEMO_JS = os.path.join(SRC, "generated", "demography.js")
+DEMO_RT = os.path.join(SRC, "demography.js")
 
 VERSIONS = [
     dict(
@@ -60,6 +62,50 @@ VERSIONS = [
         title="Airbnb in London · Kartenstory",
         desc="Scroll-Story auf der Karte: Hotspots, Wachstum und Konzentration.",
     ),
+
+    # ---- Datensatz 2: Demografie (eigener Payload, eigene Laufzeit) --------
+    dict(
+        id="demo-1-population",
+        out="d1-bevoelkerung-linien.html",
+        title="London · Bevölkerungsentwicklung",
+        desc="Linien der Bevölkerungsentwicklung 2011–2025 für alle 33 Bezirke.",
+        data=[DEMO_JS], runtime=[DEMO_RT],
+    ),
+    dict(
+        id="demo-2-age",
+        out="d2-altersstruktur.html",
+        title="London · Altersstruktur",
+        desc="Altersprofil je Bezirk im Vergleich zu ganz London.",
+        data=[DEMO_JS], runtime=[DEMO_RT],
+    ),
+    dict(
+        id="demo-3-structure",
+        out="d3-bildung-herkunft-lohn.html",
+        title="London · Bildung, Herkunft, Lohn",
+        desc="Bildung und Geburtsland 2021 sowie Lohnentwicklung seit 2002.",
+        data=[DEMO_JS], runtime=[DEMO_RT],
+    ),
+    dict(
+        id="demo-4-map",
+        out="d4-karte-indikatoren.html",
+        title="London · Indikatorenkarte",
+        desc="Choroplethenkarte mit zehn demografischen Indikatoren und Jahresauswahl.",
+        data=[DEMO_JS], runtime=[DEMO_RT],
+    ),
+    dict(
+        id="demo-5-map-change",
+        out="d5-karte-wandel.html",
+        title="London · Karte des Wandels",
+        desc="Bevölkerungswandel 2011–2025 als divergierende Karte plus Kleine Vielfache.",
+        data=[DEMO_JS], runtime=[DEMO_RT],
+    ),
+    dict(
+        id="demo-6-scrolly",
+        out="d6-scrolly-story.html",
+        title="London · Demografie-Story",
+        desc="Scroll-Story: Wachstum, Alterung, Bildung und Herkunft auf der Karte.",
+        data=[DEMO_JS], runtime=[DEMO_RT],
+    ),
 ]
 
 GALLERY = dict(
@@ -91,12 +137,20 @@ def build(spec):
     extra_css = read(os.path.join(VER, spec["id"] + ".css"), required=False)
     extra_js = read(os.path.join(VER, spec["id"] + ".js"), required=False)
 
+    # Jede Variante bekommt nur den Datensatz, den sie braucht.
+    data_files = spec.get("data") or [DATA_JS]
+    runtime_files = spec.get("runtime") or []
+
+    parts = []
+    for path in data_files:
+        parts += ["/* ---- data: %s ---- */" % os.path.basename(path), read(path)]
+    parts += ["/* ---- core ---- */", read(CORE_JS)]
+    for path in runtime_files:
+        parts += ["/* ---- runtime: %s ---- */" % os.path.basename(path), read(path)]
+    parts += ["/* ---- version: %s ---- */" % spec["id"], extra_js]
+    js = "\n".join(parts)
+
     css = minify_css(read(CORE_CSS) + "\n" + extra_css)
-    js = "\n".join([
-        "/* ---- data ---- */", read(DATA_JS),
-        "/* ---- core ---- */", read(CORE_JS),
-        "/* ---- version: %s ---- */" % spec["id"], extra_js,
-    ])
 
     html = "\n".join([
         "<!doctype html>",

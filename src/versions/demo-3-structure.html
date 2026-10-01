@@ -1,0 +1,67 @@
+<div class="viz viz--d3">
+  <header class="viz-head reveal">
+    <div class="viz-kicker">London · Demografie · Bildung, Herkunft, Lohn</div>
+    <h1 class="viz-title">Drei Merkmale, die Londoner Bezirke am stärksten trennen</h1>
+    <p class="viz-sub">
+      Jeder Balken ist ein Bezirk und auf 100 Prozent normiert. Wählen Sie oben das Merkmal
+      und klicken Sie in der Legende auf eine Kategorie, um danach zu sortieren.
+    </p>
+  </header>
+
+  <div class="controls reveal" data-delay="1">
+    <div class="ctrl-group">
+      <span class="ctrl-label">Merkmal</span>
+      <div class="seg" data-seg="family" role="group" aria-label="Merkmal">
+        <button type="button" data-v="education" aria-pressed="false">Bildung 2021</button>
+        <button type="button" data-v="origin" aria-pressed="false">Geburtsland 2021</button>
+        <button type="button" data-v="earnings" aria-pressed="true">Medianlohn</button>
+      </div>
+    </div>
+    <div class="ctrl-group" data-earnings-only hidden>
+      <span class="ctrl-label">Jahr</span>
+      <input type="range" class="d3-year" data-year min="2002" max="2024" step="1" value="2024" aria-label="Jahr">
+      <b class="d3-yearlabel" data-yearlabel>2024</b>
+    </div>
+    <div class="ctrl-group">
+      <span class="ctrl-label">Umfang</span>
+      <div class="seg" data-seg="topn" role="group" aria-label="Umfang">
+        <button type="button" data-v="0" aria-pressed="true">Alle 33</button>
+        <button type="button" data-v="15" aria-pressed="false">Top 15</button>
+      </div>
+    </div>
+    <div class="ctrl-group" style="margin-left:auto">
+      <button type="button" class="btn btn--ghost" data-reset>Zurücksetzen</button>
+    </div>
+  </div>
+
+  <div class="d3-layout">
+    <div class="d3-main card">
+      <div class="d3-head">
+        <h2 class="card-title" style="margin:0" data-title>Medianlohn</h2>
+        <div class="d3-legend" data-legend></div>
+      </div>
+      <div data-chart></div>
+      <p class="d3-note" data-note></p>
+    </div>
+
+    <aside class="d3-side">
+      <div class="card" data-detailcard hidden>
+        <h2 class="card-title">Ausgewählter Bezirk</h2>
+        <div data-detail></div>
+      </div>
+      <div class="card">
+        <h2 class="card-title">Lesart</h2>
+        <p class="d3-hint" data-read></p>
+      </div>
+    </aside>
+  </div>
+
+  <footer class="viz-foot">
+    <strong>Daten:</strong> ONS Census 2021 (TS067 höchster Bildungsabschluss, TS012 Geburtsland)
+    sowie ONS ASHE / NOMIS (Median-Bruttowochenverdienst, 2002–2024).<br>
+    <strong>Hinweis:</strong> Census-Angaben beziehen sich auf 2021 und die Bevölkerung ab 16 Jahren.
+    Löhne werden für kleine Bezirke teilweise nicht veröffentlicht – solche Jahre bleiben leer.
+    Der Medianlohn ist ein Vollzeitäquivalent und sagt nichts über das Einkommen der Bevölkerung insgesamt.
+  </footer>
+</div>
+

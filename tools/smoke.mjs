@@ -105,9 +105,11 @@ async function run(file, query, full) {
   const embedWanted = (query || "").indexOf("embed=1") >= 0;
   ok(!embedWanted || d.body.classList.contains("is-embed"), "erkennt ?embed=1", "is-embed fehlt");
   if (isGallery) {
-    ok(d.querySelectorAll(".kit-card").length >= 6, "6 Varianten-Kacheln (" + d.querySelectorAll(".kit-card").length + ")");
-    ok(d.querySelectorAll(".kit-card iframe").length >= 6, "Vorschau-iframes vorhanden");
-    ok(d.querySelectorAll(".kit-file").length >= 5, "Datendateien verlinkt (" + d.querySelectorAll(".kit-file").length + ")");
+    ok(d.querySelectorAll(".kit-card").length >= 12, "12 Varianten-Kacheln (" + d.querySelectorAll(".kit-card").length + ")");
+    ok(d.querySelectorAll(".kit-card iframe").length >= 12, "Vorschau-iframes vorhanden");
+    ok(d.querySelectorAll("[data-cards] .kit-card").length === 6, "Airbnb-Set hat 6 Kacheln");
+    ok(d.querySelectorAll("[data-cards-demo] .kit-card").length === 6, "Demografie-Set hat 6 Kacheln");
+    ok(d.querySelectorAll(".kit-file").length >= 9, "Datendateien verlinkt (" + d.querySelectorAll(".kit-file").length + ")");
     const sn = d.querySelector("[data-snippet]");
     ok(!!sn && sn.textContent.indexOf("iframe") >= 0 && sn.textContent.indexOf("embed=1") > 0, "iframe-Snippet erzeugt");
     const ut = d.querySelector("[data-urltext]");

@@ -23,11 +23,23 @@ Es gibt **zwei getrennte Datensätze**. Sie werden nicht vermischt:
 
 | Datensatz | Quelldatei | Aufbereitung | Payload | Ausgabe |
 |---|---|---|---|---|
-| Airbnb | `London_Airbnb_Datawrapper_Ready_FINAL.xlsx` | `tools/prepare_data.py` | `src/generated/data.js` | `dist/1…6-*.html` |
-| Demografie | `London_Demographie_Datawrapper_Ready_FINAL_demograhie.xlsx` | `tools/prepare_demography.py` | `src/generated/demography.js` | *(in Arbeit, siehe unten)* |
+| Airbnb | `London_Airbnb_Datawrapper_Ready_FINAL.xlsx` | `tools/prepare_data.py` | `src/generated/data.js` | `1…6-*.html` |
+| Demografie | `London_Demographie_Datawrapper_Ready_FINAL_demograhie.xlsx` | `tools/prepare_demography.py` | `src/generated/demography.js` | `d1…d6-*.html` |
 
 Die Bezirksgrenzen (`tools/cache/london_boroughs.geojson`, ONS) sind reine Geografie und
 werden von beiden Datensätzen gemeinsam genutzt – sie enthalten keine Fachdaten.
+
+Welche Datei welche Daten bekommt, steht in `tools/build.py` je Variante:
+
+```python
+dict(id="demo-1-population", out="d1-bevoelkerung-linien.html", …,
+     data=[DEMO_JS], runtime=[DEMO_RT])
+```
+
+`data` ist die eingebettete Payload (Standard: `data.js`), `runtime` eine zusätzliche
+Laufzeitschicht (für die Demografie: `src/demography.js`, das `window.Viz` um `V.demo`
+erweitert). `src/core.js` greift automatisch auf `window.LONDON_AIRBNB` **oder**
+`window.LONDON_DEMOGRAPHY` zu.
 
 ---
 
@@ -171,17 +183,22 @@ chrome --headless=new --disable-gpu --hide-scrollbars \
 
 ---
 
-## 7 · Offen: Datensatz 2 (Demografie)
+## 7 · Stand
 
-Vorbereitet, aber bewusst **noch nicht gebaut**:
+Beide Datensätze sind gebaut: **zwölf Varianten** (`1`–`6` für Airbnb, `d1`–`d6` für
+Demografie) plus das Embed-Kit. Sie werden getrennt aufbereitet, getrennt exportiert und
+nie miteinander verknüpft.
 
-* `tools/prepare_demography.py` – liest alle Blätter des Demografie-Workbooks und
-  schreibt `src/generated/demography.js` (33 Bezirke, Bevölkerung 2011–2025,
-  Altersprofil in Einzeljahren, Geschlecht, Bildung 2021, Geburtsland 2021,
-  Medianlohn 2002–2024).
-* `src/demography.js` – Laufzeit mit Zugriffsfunktionen und Indikator-Definitionen
-  (`V.demo`). Wird derzeit von keiner Variante eingebunden und stört den Betrieb nicht.
+Die Demografie-Varianten im Einzelnen:
 
-Geplant ist ein paralleler Satz aus drei Diagrammen und drei Karten, mit derselben
-Mechanik und Gestaltung wie der Airbnb-Satz. Die Registrierung in `tools/build.py`
-erfolgt erst, wenn die Varianten existieren.
+| Datei | Inhalt |
+|---|---|
+| `d1-bevoelkerung-linien.html` | Bevölkerung/Dichte/Medianalter 2011–2025, X = Jahr, Y = Bezirke, Modus Rang/Wert/Index |
+| `d2-altersstruktur.html` | Altersprofil in Einzeljahrgängen gegen Greater London, plus Bezirksrangliste und Geschlechterverteilung |
+| `d3-bildung-herkunft-lohn.html` | 100-%-Balken für Bildung und Geburtsland, Balken plus Sparkline für den Lohn |
+| `d4-karte-indikatoren.html` | Zehn Indikatoren auf der Karte, Jahresregler passt sich dem Indikator an |
+| `d5-karte-wandel.html` | Divergierende Veränderungskarte plus Kleine Vielfache 2011/2018/2025 |
+| `d6-scrolly-story.html` | Acht Schritte als Scroll-Story bzw. Player im Embed |
+
+Erweitern lässt sich das nach demselben Muster: Variante anlegen, in `tools/build.py`
+registrieren, `data=` auf die passende Payload setzen.

@@ -1,0 +1,84 @@
+<div class="viz viz--d5">
+  <header class="viz-head reveal">
+    <div class="viz-kicker">London · Demografie · Wandel</div>
+    <h1 class="viz-title">Die Stadt wächst – aber nicht dort, wo man denkt</h1>
+    <p class="viz-sub">
+      Greater London hat zwischen 2011 und 2025 rund 918.000 Einwohner:innen dazugewonnen.
+      Die Karte zeigt, welche Bezirke daran Anteil haben – und welche kleiner geworden sind.
+    </p>
+  </header>
+
+  <div class="controls reveal" data-delay="1">
+    <div class="ctrl-group">
+      <span class="ctrl-label">Ansicht</span>
+      <div class="seg seg--accent" data-seg="view" role="group" aria-label="Ansicht">
+        <button type="button" data-v="change" aria-pressed="true">Veränderung</button>
+        <button type="button" data-v="stock" aria-pressed="false">Bestand</button>
+      </div>
+    </div>
+    <div class="ctrl-group" data-period-group>
+      <span class="ctrl-label">Zeitraum</span>
+      <div class="seg" data-seg="period" role="group" aria-label="Zeitraum"></div>
+    </div>
+    <div class="ctrl-group">
+      <span class="ctrl-label">Blasen</span>
+      <div class="seg" data-seg="bub" role="group" aria-label="Blasen">
+        <button type="button" data-v="pop" aria-pressed="true">Bevölkerung</button>
+        <button type="button" data-v="off" aria-pressed="false">aus</button>
+      </div>
+    </div>
+    <div class="ctrl-group" style="margin-left:auto">
+      <button type="button" class="btn btn--ghost" data-reset>Zurücksetzen</button>
+    </div>
+  </div>
+
+  <div class="d5-layout">
+    <div class="d5-main">
+      <div class="card d5-mapwrap">
+        <div class="d5-maphead">
+          <h2 class="card-title" style="margin:0" data-maptitle>Veränderung 2011 → 2025</h2>
+          <div class="d5-scale" data-scale></div>
+        </div>
+        <div data-map></div>
+        <div class="d5-legend">
+          <span class="legend-title" data-legendtitle>Veränderung</span>
+          <div class="legend-ramp">
+            <span class="legend-lo" data-legendmin>–</span>
+            <span class="legend-swatches" data-swatches></span>
+            <span class="legend-hi" data-legendmax>–</span>
+          </div>
+          <span class="map-hint">Fläche anklicken, um einen Bezirk zu fixieren</span>
+        </div>
+      </div>
+
+      <div class="card d5-multi">
+        <h2 class="card-title">Bevölkerung im Vergleich</h2>
+        <div class="d5-multigrid" data-multi></div>
+        <p class="d5-note">Dieselbe Farbskala in allen drei Karten – dunkler heißt mehr Einwohner:innen.</p>
+      </div>
+    </div>
+
+    <aside class="d5-side">
+      <div class="card">
+        <h2 class="card-title" data-listtitle>Größte Veränderung</h2>
+        <div data-rank class="ranklist"></div>
+      </div>
+      <div class="card" data-detailcard hidden>
+        <h2 class="card-title">Ausgewählter Bezirk</h2>
+        <div data-detail></div>
+      </div>
+      <div class="card">
+        <h2 class="card-title">London gesamt</h2>
+        <div data-city class="statlist"></div>
+      </div>
+    </aside>
+  </div>
+
+  <footer class="viz-foot">
+    <strong>Daten:</strong> ONS Mid-Year Population Estimates 2011–2025.<br>
+    <strong>Geometrie:</strong> ONS Open Geography Portal, Local Authority Districts (Mai 2024),
+    generalisiert und geklippt, Open Government Licence v3.0.<br>
+    <strong>Hinweis:</strong> Die Farbskala der Veränderung ist um null zentriert: Rot heißt Rückgang,
+    Blau heißt Zunahme. Bevölkerungsschätzungen werden rückwirkend revidiert.
+  </footer>
+</div>

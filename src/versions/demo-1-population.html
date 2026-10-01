@@ -1,0 +1,82 @@
+<div class="viz viz--d1">
+  <header class="viz-head reveal">
+    <div class="viz-kicker">London · Demografie · 2011 – 2025</div>
+    <h1 class="viz-title">Eine Stadt wächst – aber die Bezirke driften auseinander</h1>
+    <p class="viz-sub">
+      Die X-Achse zeigt die Jahre 2011 bis 2025, die Y-Achse listet alle 33 Bezirke von
+      Greater London. Bewegen Sie den Zeiger über eine Linie, um einen Bezirk hervorzuheben –
+      ein Klick fixiert ihn.
+    </p>
+  </header>
+
+  <div class="controls reveal" data-delay="1">
+    <div class="ctrl-group">
+      <span class="ctrl-label">Messgröße</span>
+      <div class="seg" data-seg="metric" role="group" aria-label="Messgröße"></div>
+    </div>
+    <div class="ctrl-group">
+      <span class="ctrl-label">Y-Achse</span>
+      <div class="seg" data-seg="mode" role="group" aria-label="Y-Achse">
+        <button type="button" data-v="rank" aria-pressed="true">Rang</button>
+        <button type="button" data-v="value" aria-pressed="false">Wert</button>
+        <button type="button" data-v="index" aria-pressed="false">Index</button>
+      </div>
+    </div>
+    <div class="ctrl-group">
+      <span class="ctrl-label">Umfang</span>
+      <div class="seg" data-seg="topn" role="group" aria-label="Umfang">
+        <button type="button" data-v="0" aria-pressed="true">Alle 33</button>
+        <button type="button" data-v="10" aria-pressed="false">Top 10</button>
+        <button type="button" data-v="20" aria-pressed="false">Top 20</button>
+      </div>
+    </div>
+    <div class="ctrl-group" style="margin-left:auto">
+      <button type="button" class="btn btn--ghost" data-reset>Zurücksetzen</button>
+    </div>
+  </div>
+
+  <div class="controls controls--range reveal" data-delay="2">
+    <div class="ctrl-group">
+      <span class="ctrl-label">Zeitraum</span>
+      <div class="d1-range">
+        <input type="range" data-from min="2011" max="2025" step="1" value="2011" aria-label="Startjahr">
+        <input type="range" data-to min="2011" max="2025" step="1" value="2025" aria-label="Endjahr">
+      </div>
+    </div>
+    <div class="d1-rangelabel"><b data-rangetext>2011 – 2025</b><span data-rangenote></span></div>
+  </div>
+
+  <div class="d1-layout">
+    <div class="d1-main">
+      <div class="d1-chartwrap" data-chart></div>
+      <div class="d1-legend">
+        <span class="legend-title">Farbe</span>
+        <span class="d1-grad" aria-hidden="true"></span>
+        <span data-gradientnote>früh → spät</span>
+        <span class="d1-hint">Klick auf eine Linie fixiert den Bezirk</span>
+      </div>
+    </div>
+
+    <aside class="d1-side">
+      <div class="d1-sidehead">
+        <span class="card-title" style="margin:0">Bezirke</span>
+        <label class="search">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true">
+            <circle cx="11" cy="11" r="7"></circle><path d="M20 20l-3.6-3.6"></path>
+          </svg>
+          <input type="search" placeholder="Bezirk suchen …" aria-label="Bezirk suchen" data-q>
+        </label>
+      </div>
+      <div class="d1-list" data-list role="list"></div>
+      <div class="d1-note" data-citynote></div>
+    </aside>
+  </div>
+
+  <footer class="viz-foot">
+    <strong>Daten:</strong> ONS Mid-Year Population Estimates, 2011 bis 2025
+    (Bevölkerung, Bevölkerungsdichte, Medianalter).<br>
+    <strong>Hinweis:</strong> Bevölkerungsschätzungen werden jährlich rückwirkend revidiert;
+    die Werte sind gerundet. Einzelne Bezirke weisen für manche Jahre keine Angabe aus –
+    solche Lücken werden nicht interpoliert.
+  </footer>
+</div>

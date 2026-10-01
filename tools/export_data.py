@@ -18,6 +18,7 @@ import urllib.request
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 GEOJSON = os.path.join(ROOT, "tools", "cache", "london_boroughs.geojson")
 DATA_JS = os.path.join(ROOT, "src", "generated", "data.js")
+DEMO_JS = os.path.join(ROOT, "src", "generated", "demography.js")
 OUT = os.path.join(ROOT, sys.argv[1] if len(sys.argv) > 1 else "dist", "data")
 
 GEO_URL = (
@@ -34,6 +35,103 @@ def load_payload():
     with open(DATA_JS, encoding="utf-8") as fh:
         raw = fh.read()
     return json.loads(raw[raw.index("=") + 1:raw.rindex(";")])
+
+
+def load_demography():
+    if not os.path.exists(DEMO_JS):
+        return None
+    with open(DEMO_JS, encoding="utf-8") as fh:
+        raw = fh.read()
+    return json.loads(raw[raw.index("=") + 1:raw.rindex(";")])
+
+
+def export_demography():
+    """Eigene Exporte für den zweiten Datensatz - ohne Airbnb-Werte."""
+    d = load_demography()
+    if not d:
+        return []
+    B = d["boroughs"]
+    years = d["meta"]["years"]
+    earn_years = d["meta"]["earnYears"]
+    out = []
+
+    # 1 · Bevölkerung, Dichte, Medianalter als lange Reihe
+    rows = []
+    for y in years:
+        for b in sorted(B, key=lambda x: x["name"]):
+            rows.append([
+                b["name"], b["code"], y,
+                b["pop"].get(str(y)), b["density"].get(str(y)),
+                b["medianAge"].get(str(y)), b["popGrowth"].get(str(y)),
+                round(b["pop"].get(str(y), 0) / 1000.0, 1),
+                "ONS Mid-Year Population Estimates",
+            ])
+    p, s = write_csv("demografie-bevoelkerung-lang.csv",
+                     ["Borough", "Area Code", "Year", "Population",
+                      "Population density (people/km2)", "Median age",
+                      "Population growth vs previous year %", "Population in thousands", "Source"], rows)
+    out.append((p, s))
+
+    # 2 · Strukturprofil je Bezirk in einer Zeile
+    grows = []
+    for b in sorted(B, key=lambda x: -(x["pop"].get("2025") or 0)):
+        ag = b["ageGroups"]
+        ed = b["education"]
+        og = b["origin"]
+        ind = b["originIndicators"]
+        grows.append([
+            b["name"], b["code"],
+            b["pop"].get("2025"), b["density"].get("2025"), b["medianAge"].get("2025"),
+            (ag.get("Age 0\u201315") or {}).get("share"),
+            (ag.get("Age 16\u201364") or {}).get("share"),
+            (ag.get("Age 65+") or {}).get("share"),
+            (b["sex"].get("Female") or {}).get("share"),
+            (b["sex"].get("Male") or {}).get("share"),
+            (ed.get("No qualifications") or {}).get("share"),
+            (ed.get("Level 4+") or {}).get("share"),
+            (ind.get("UK-born") or {}).get("share"),
+            (ind.get("Non-UK-born") or {}).get("share"),
+            (og.get("EU-born") or {}).get("share"),
+            (og.get("Africa-born") or {}).get("share"),
+            (og.get("Middle East & Asia-born") or {}).get("share"),
+            (og.get("Americas & Caribbean-born") or {}).get("share"),
+            (b["earnings"].get("2024") or {}).get("value"),
+        ])
+    p, s = write_csv("demografie-bezirksprofil.csv",
+                     ["Borough", "Area Code", "Population 2025", "Density 2025 (people/km2)",
+                      "Median age 2025", "Share 0-15 %", "Share 16-64 %", "Share 65+ %",
+                      "Share female %", "Share male %",
+                      "No qualifications %", "Level 4+ %",
+                      "UK-born %", "Non-UK-born %",
+                      "EU-born %", "Africa-born %", "Middle East & Asia-born %",
+                      "Americas & Caribbean-born %",
+                      "Median gross weekly earnings 2024 (GBP)"], grows)
+    out.append((p, s))
+
+    # 3 · Altersstruktur in Einzeljahren
+    arows = []
+    for b in sorted(B, key=lambda x: x["name"]):
+        tot = sum(b["ages"] or []) or 1
+        for age, v in enumerate(b["ages"] or []):
+            arows.append([b["name"], b["code"], 2025, age, v, round((v or 0) / tot * 100, 4)])
+    p, s = write_csv("demografie-altersstruktur.csv",
+                     ["Borough", "Area Code", "Year", "Age", "Population",
+                      "Share of borough population %"], arows)
+    out.append((p, s))
+
+    # 4 · Lohnreihe
+    erows = []
+    for y in earn_years:
+        for b in sorted(B, key=lambda x: x["name"]):
+            e = (b["earnings"] or {}).get(str(y)) or {}
+            erows.append([b["name"], b["code"], y, e.get("value"),
+                          e.get("status") or "", "ONS ASHE / NOMIS"])
+    p, s = write_csv("demografie-lohn-lang.csv",
+                     ["Borough", "Area Code", "Year",
+                      "Median gross weekly earnings (GBP)", "Publication status", "Source"], erows)
+    out.append((p, s))
+
+    return out
 
 
 def load_geo():
@@ -198,6 +296,8 @@ def main():
     for p, s in [(long_path, long_size), (wide_path, wide_size), (map_path, map_size)]:
         print("%-34s %7.1f KB" % (os.path.basename(p), s / 1024))
     print("%-34s %7.1f KB" % ("london-boroughs.geojson", g_size / 1024))
+    for p2, s2 in export_demography():
+        print("%-34s %7.1f KB" % (os.path.basename(p2), s2 / 1024))
     print("%-34s %7.1f KB" % ("london-boroughs-lite.geojson", gl_size / 1024))
     print("rows: long=%d wide=%d map=%d" % (len(rows), len(wrows), len(mrows)))
 

@@ -1,0 +1,81 @@
+/* ------------------------------------------------- demo 2 · Altersbild --- */
+
+.d2-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 292px;
+  gap: 20px; align-items: start;
+}
+.d2-main { padding: 15px 15px 10px; }
+
+.d2-head {
+  display: flex; align-items: flex-start; justify-content: space-between;
+  gap: 16px; flex-wrap: wrap; margin-bottom: 12px;
+}
+.d2-title { font-size: 19px; letter-spacing: -.025em; margin: 0 0 3px; }
+.d2-sub { font-size: 12.5px; color: var(--text-mute); margin: 0; }
+
+.d2-groups { display: flex; gap: 18px; }
+.d2-group { text-align: right; line-height: 1.15; }
+.d2-group b { display: block; font-size: 16px; font-weight: 800; font-variant-numeric: tabular-nums; }
+.d2-group span { font-size: 10.5px; color: var(--text-mute); }
+.d2-group i { display: block; font-size: 10.5px; font-style: normal; color: var(--text-soft); font-variant-numeric: tabular-nums; }
+
+.d2-main svg { display: block; width: 100%; height: auto; }
+
+.d2-legend {
+  display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+  margin-top: 10px; padding-top: 10px; border-top: 1px solid var(--line);
+  font-size: 12px; color: var(--text-soft);
+}
+.d2-sw { width: 11px; height: 11px; border-radius: 3px; display: block; }
+.d2-sw--b { background: var(--accent); }
+.d2-sw--l { background: var(--text-mute); }
+.d2-hint { margin-left: auto; color: var(--text-mute); font-size: 11.5px; }
+
+.d2-bar { transition: opacity .2s var(--ease-out); }
+.d2-bar.is-lit { opacity: 1; }
+.d2-agebg { fill: transparent; cursor: crosshair; transition: fill .15s; }
+.d2-agebg:hover { fill: var(--bg-soft); }
+.d2-marker { stroke: var(--text); stroke-width: 1; stroke-dasharray: 2 2; opacity: 0; }
+.d2-marker.is-on { opacity: .55; }
+
+.d2-side { display: grid; gap: 16px; position: sticky; top: 16px; }
+.d2-sidehead { display: flex; flex-direction: column; gap: 9px; margin-bottom: 9px; }
+.d2-sidehead .search input { width: 100%; }
+.d2-sidehead .search input:focus { width: 100%; }
+.d2-list { display: grid; gap: 2px; max-height: 420px; overflow-y: auto; }
+
+.d2-item {
+  display: grid; grid-template-columns: minmax(0, 1fr) 74px 46px;
+  align-items: center; gap: 8px;
+  width: 100%; text-align: left; border: 0; background: transparent; cursor: pointer;
+  padding: 4px 6px; border-radius: 7px; transition: background .15s;
+}
+.d2-item:hover { background: var(--bg-soft); }
+.d2-item.is-on { background: var(--accent-soft); }
+.d2-item .nm { font-size: 12px; font-weight: 600; color: var(--text-soft); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.d2-item.is-on .nm, .d2-item:hover .nm { color: var(--text); }
+.d2-item .vv { font-size: 11.5px; font-weight: 700; text-align: right; font-variant-numeric: tabular-nums; }
+.d2-mini { height: 7px; border-radius: 3px; background: var(--bg-sunken); overflow: hidden; display: flex; }
+.d2-mini i { display: block; height: 100%; }
+.d2-group-legend {
+  display: flex; gap: 10px; flex-wrap: wrap; margin-top: 9px;
+  font-size: 10.5px; color: var(--text-mute);
+}
+.d2-group-legend span { display: inline-flex; align-items: center; gap: 4px; }
+.d2-group-legend i { width: 8px; height: 8px; border-radius: 2px; display: block; }
+
+.d2-sex { display: grid; gap: 8px; }
+.d2-sexbar { display: flex; height: 26px; border-radius: 8px; overflow: hidden; box-shadow: inset 0 0 0 1px var(--line); }
+.d2-sexbar div { display: grid; place-items: center; font-size: 11px; font-weight: 700; color: #fff; transition: width .6s var(--ease-out); }
+.d2-sexlegend { display: flex; justify-content: space-between; font-size: 11px; color: var(--text-soft); }
+
+@media (max-width: 1000px) {
+  .d2-layout { grid-template-columns: minmax(0, 1fr); }
+  .d2-side { position: static; }
+  .d2-list { max-height: 300px; }
+}
+@media (max-width: 620px) {
+  .d2-groups { gap: 12px; }
+  .d2-item { grid-template-columns: minmax(0, 1fr) 60px 40px; }
+}

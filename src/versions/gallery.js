@@ -28,18 +28,52 @@
   ];
 
   var FILES = [
-    { n: "airbnb-london-long.csv", t: "csv", s: "16,6 KB", d: "Bereinigte Langfassung: eine Zeile je Bezirk × Stichtag, mit Einwohnerzahlen und Koordinaten. Basis für Tableau und für Datawrapper-Symbolkarten." },
-    { n: "airbnb-london-wide.csv", t: "csv", s: "3,7 KB", d: "Ein Bezirk pro Zeile, die drei Stichtage als Spalten plus absolute und prozentuale Veränderungen. Ideal für Datawrapper-Linien- und Balkendiagramme." },
-    { n: "airbnb-london-map.csv", t: "csv", s: "3,6 KB", d: "Auf den Kartenschlüssel reduziert: Area Code, Bezirk, Jahr, Inserate und Inserate je 1.000 – zum Verbinden mit dem GeoJSON." },
-    { n: "london-boroughs.geojson", t: "geo", s: "126 KB", d: "ONS-Bezirksgrenzen in WGS84, alle Ringe als MultiPolygon. Für Datawrapper-Custom-Maps und als Tableau-Spatial-File." },
-    { n: "london-boroughs-lite.geojson", t: "geo", s: "32 KB", d: "Dieselben Grenzen, auf rund 180 m vereinfacht – für kleine Karten und schnelle Ladezeiten." }
+    { n: "airbnb-london-long.csv", t: "csv", s: "16,6 KB", set: "Airbnb",
+      d: "Bereinigte Langfassung: eine Zeile je Bezirk × Stichtag, mit Einwohnerzahlen und Koordinaten. Basis für Tableau und für Datawrapper-Symbolkarten." },
+    { n: "airbnb-london-wide.csv", t: "csv", s: "3,7 KB", set: "Airbnb",
+      d: "Ein Bezirk pro Zeile, die drei Stichtage als Spalten plus absolute und prozentuale Veränderungen. Ideal für Datawrapper-Linien- und Balkendiagramme." },
+    { n: "airbnb-london-map.csv", t: "csv", s: "3,6 KB", set: "Airbnb",
+      d: "Auf den Kartenschlüssel reduziert: Area Code, Bezirk, Jahr, Inserate und Inserate je 1.000 – zum Verbinden mit dem GeoJSON." },
+    { n: "demografie-bevoelkerung-lang.csv", t: "csv", s: "44,6 KB", set: "Demografie",
+      d: "Bevölkerung, Dichte und Medianalter je Bezirk und Jahr, 2011–2025 (495 Zeilen)." },
+    { n: "demografie-bezirksprofil.csv", t: "csv", s: "4,2 KB", set: "Demografie",
+      d: "Ein Bezirk pro Zeile: Bevölkerung, Dichte, Medianalter, Alters- und Geschlechteranteile, Bildung, Herkunft und Medianlohn." },
+    { n: "demografie-altersstruktur.csv", t: "csv", s: "125 KB", set: "Demografie",
+      d: "Altersstruktur in Einzeljahren (0–90+) je Bezirk für 2025 – die Basis des Altersprofils." },
+    { n: "demografie-lohn-lang.csv", t: "csv", s: "48,6 KB", set: "Demografie",
+      d: "Median-Bruttowochenverdienst je Bezirk und Jahr, 2002–2024, inklusive der nicht veröffentlichten Werte." },
+    { n: "london-boroughs.geojson", t: "geo", s: "126 KB", set: "Geometrie",
+      d: "ONS-Bezirksgrenzen in WGS84, alle Ringe als MultiPolygon. Für Datawrapper-Custom-Maps und als Tableau-Spatial-File. Gilt für beide Datensätze." },
+    { n: "london-boroughs-lite.geojson", t: "geo", s: "32 KB", set: "Geometrie",
+      d: "Dieselben Grenzen, auf rund 180 m vereinfacht – für kleine Karten und schnelle Ladezeiten." }
   ];
 
   /* ------------------------------------------------------------ cards ---- */
-  var grid = V.$("[data-cards]");
   var frames = [];
-  if (grid) {
-    VARIANTS.forEach(function (v, i) {
+  var DEMO = [
+    { file: "d1-bevoelkerung-linien.html", kind: "chart", tag: "Linien",
+      title: "Bevölkerungsentwicklung",
+      desc: "X-Achse Jahr 2011–2025, Y-Achse alle 33 Bezirke – als Rang, Wert oder Index. Mit Zeitraum-Regler, Suche und fixierbaren Bezirken." },
+    { file: "d2-altersstruktur.html", kind: "chart", tag: "Altersprofil",
+      title: "Altersstruktur",
+      desc: "Jeder Jahrgang von 0 bis 90+ als Anteil an der Bevölkerung, für einen gewählten Bezirk im Vergleich zu ganz London." },
+    { file: "d3-bildung-herkunft-lohn.html", kind: "chart", tag: "Balken",
+      title: "Bildung, Herkunft, Lohn",
+      desc: "Auf 100 Prozent normierte Balken je Bezirk – umschaltbar zwischen Bildungsabschluss, Geburtsland und der Lohnentwicklung seit 2002." },
+    { file: "d4-karte-indikatoren.html", kind: "map", tag: "Karte",
+      title: "Indikatorenkarte",
+      desc: "Zehn Merkmale auf echten ONS-Grenzen, mit Jahresregler, Flächen- oder Blasendarstellung und Verlauf im Detailfeld." },
+    { file: "d5-karte-wandel.html", kind: "map", tag: "Karte",
+      title: "Karte des Wandels",
+      desc: "Bevölkerungsveränderung als divergierende Karte – um null zentriert – plus drei Kleine Vielfache für 2011, 2018 und 2025." },
+    { file: "d6-scrolly-story.html", kind: "map", tag: "Story · Karte",
+      title: "Demografie-Story",
+      desc: "Acht Schritte von der Bevölkerungszahl über Alter und Bildung bis zum Lohn. Im Embed läuft sie als Player mit Tastatursteuerung." }
+  ];
+
+  function renderCards(grid, list) {
+    if (!grid) return;
+    list.forEach(function (v, i) {
       var card = V.el("article", { cls: "kit-card reveal", "data-delay": String(Math.min(4, i)) }, grid);
       var head = V.el("div", { cls: "kit-card-head" }, card);
       V.el("span", {
@@ -53,16 +87,12 @@
       var ifr = V.el("iframe", {
         src: v.file + "?embed=1&theme=light",
         title: "Vorschau: " + v.title,
-        loading: "lazy",
-        scrolling: "no",
-        tabindex: "-1",
-        "aria-hidden": "true"
+        loading: "lazy", scrolling: "no", tabindex: "-1", "aria-hidden": "true"
       }, prev);
       frames.push({ iframe: ifr, box: prev });
 
       var foot = V.el("div", { cls: "kit-card-foot" }, card);
-      var open = V.el("a", { cls: "kit-link kit-link--primary", href: v.file, target: "_blank", rel: "noopener", text: "Öffnen" }, foot);
-      void open;
+      V.el("a", { cls: "kit-link kit-link--primary", href: v.file, target: "_blank", rel: "noopener", text: "Öffnen" }, foot);
       V.el("a", { cls: "kit-link", href: v.file + "?embed=1", target: "_blank", rel: "noopener", text: "?embed=1" }, foot);
       var cp = V.el("button", { cls: "kit-link", type: "button", text: "Snippet kopieren" }, foot);
       V.el("span", { cls: "kit-hint", text: v.file }, foot);
@@ -74,6 +104,9 @@
       });
     });
   }
+
+  renderCards(V.$("[data-cards]"), VARIANTS);
+  renderCards(V.$("[data-cards-demo]"), DEMO);
 
   /* Vorschauen massstabsgetreu in die Kachel einpassen */
   var PREVIEW_H = 250;
@@ -97,6 +130,7 @@
     frames.forEach(function (f) { f.box.classList.add("is-live"); });
   }, 1200);
 
+  var grid = V.$("[data-cards]");
   var refit = V.debounce(fitPreviews, 140);
   if ("ResizeObserver" in window && grid) {
     try { new ResizeObserver(refit).observe(grid); } catch (e) { /* noop */ }
@@ -110,8 +144,9 @@
       var a = V.el("a", { cls: "kit-file", href: "data/" + f.n, download: f.n, target: "_blank", rel: "noopener" }, filesHost);
       V.el("span", { cls: "ico " + f.t, text: f.t === "csv" ? "CSV" : "GEO" }, a);
       var mid = V.el("span", null, a);
-      V.el("div", { cls: "nm", text: f.n }, mid);
-      V.el("div", { cls: "ds", text: f.d }, mid);
+      V.el("div", { cls: "nm" }, mid).appendChild(document.createTextNode(f.n));
+      V.el("div", { cls: "ds" }, mid).appendChild(document.createTextNode(
+        (f.set ? f.set + " · " : "") + f.d));
       V.el("span", { cls: "sz", text: f.s }, a);
     });
   }

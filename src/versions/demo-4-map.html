@@ -1,0 +1,73 @@
+<div class="viz viz--d4">
+  <header class="viz-head reveal">
+    <div class="viz-kicker">London · Demografie · Karte</div>
+    <h1 class="viz-title">Zehn Merkmale, 33 Bezirke – die demografische Karte</h1>
+    <p class="viz-sub">
+      Wählen Sie ein Merkmal und – wo vorhanden – das Jahr. Ein Klick auf einen Bezirk fixiert
+      ihn und zeigt seinen Verlauf.
+    </p>
+  </header>
+
+  <div class="controls reveal" data-delay="1">
+    <div class="ctrl-group">
+      <span class="ctrl-label">Jahr</span>
+      <input type="range" class="d4-year" data-year min="2011" max="2025" step="1" value="2025" aria-label="Jahr">
+      <b class="d4-yearlabel" data-yearlabel>2025</b>
+    </div>
+    <div class="ctrl-group">
+      <span class="ctrl-label">Darstellung</span>
+      <div class="seg" data-seg="view" role="group" aria-label="Darstellung">
+        <button type="button" data-v="choropleth" aria-pressed="true">Flächen</button>
+        <button type="button" data-v="bubbles" aria-pressed="false">Blasen</button>
+      </div>
+    </div>
+    <div class="ctrl-group" style="margin-left:auto">
+      <button type="button" class="btn btn--ghost" data-reset>Zurücksetzen</button>
+    </div>
+  </div>
+
+  <div class="controls controls--inds reveal" data-delay="2">
+    <span class="ctrl-label">Merkmal</span>
+    <div class="chips d4-inds" data-inds role="group" aria-label="Merkmal"></div>
+  </div>
+
+  <div class="d4-layout">
+    <div class="d4-mapwrap card">
+      <div data-map></div>
+      <div class="d4-legend">
+        <span class="legend-title" data-legendtitle>Bevölkerung</span>
+        <div class="legend-ramp">
+          <span class="legend-lo" data-legendmin>0</span>
+          <span class="legend-swatches" data-swatches></span>
+          <span class="legend-hi" data-legendmax>–</span>
+        </div>
+        <span class="map-hint">Fläche anklicken, um einen Bezirk zu fixieren</span>
+      </div>
+    </div>
+
+    <aside class="d4-side">
+      <div class="card">
+        <h2 class="card-title" data-ranktitle>Rangliste</h2>
+        <div data-rank class="ranklist"></div>
+      </div>
+      <div class="card" data-detailcard hidden>
+        <h2 class="card-title">Ausgewählter Bezirk</h2>
+        <div data-detail></div>
+      </div>
+      <div class="card">
+        <h2 class="card-title">London gesamt</h2>
+        <div data-city class="statlist"></div>
+      </div>
+    </aside>
+  </div>
+
+  <footer class="viz-foot">
+    <strong>Daten:</strong> ONS Mid-Year Population Estimates (Bevölkerung, Dichte, Medianalter
+    2011–2025), ONS Census 2021 (Bildung TS067, Geburtsland TS012), ONS ASHE 2002–2024
+    (Medianlohn).<br>
+    <strong>Geometrie:</strong> ONS Open Geography Portal, Local Authority Districts (Mai 2024),
+    generalisiert und geklippt, Open Government Licence v3.0.<br>
+    <strong>Hinweis:</strong> Farbflächen vergleichen Bezirke, nicht Menschen. Der Medianlohn
+    wird für einzelne Bezirke nicht veröffentlicht.
+  </footer>
+</div>

@@ -1,0 +1,82 @@
+<div class="viz viz--d2">
+  <header class="viz-head reveal">
+    <div class="viz-kicker">London · Demografie · Altersstruktur 2025</div>
+    <h1 class="viz-title">Wer in London lebt, hängt vom Bezirk ab</h1>
+    <p class="viz-sub">
+      Das Altersprofil zeigt jeden Jahrgang von 0 bis 90+ als Anteil an der Bevölkerung.
+      Wählen Sie rechts einen Bezirk – die Balken vergleichen ihn mit ganz London.
+    </p>
+  </header>
+
+  <div class="controls reveal" data-delay="1">
+    <div class="ctrl-group">
+      <span class="ctrl-label">Kennzahl</span>
+      <div class="seg" data-seg="metric" role="group" aria-label="Kennzahl">
+        <button type="button" data-v="age0" aria-pressed="false">Anteil 0–15</button>
+        <button type="button" data-v="age16" aria-pressed="false">Anteil 16–64</button>
+        <button type="button" data-v="age65" aria-pressed="false">Anteil 65+</button>
+        <button type="button" data-v="medianAge" aria-pressed="true">Medianalter</button>
+      </div>
+    </div>
+    <div class="ctrl-group">
+      <span class="ctrl-label">Vergleich</span>
+      <div class="seg" data-seg="cmp" role="group" aria-label="Vergleich">
+        <button type="button" data-v="city" aria-pressed="true">mit London</button>
+        <button type="button" data-v="none" aria-pressed="false">ohne</button>
+      </div>
+    </div>
+    <div class="ctrl-group" style="margin-left:auto">
+      <button type="button" class="btn btn--ghost" data-reset>Zurücksetzen</button>
+    </div>
+  </div>
+
+  <div class="d2-layout">
+    <div class="d2-main card">
+      <div class="d2-head">
+        <div>
+          <h2 class="d2-title" data-btitle>Westminster</h2>
+          <p class="d2-sub" data-bsub>Altersprofil im Vergleich zu Greater London</p>
+        </div>
+        <div class="d2-groups" data-groups></div>
+      </div>
+      <div data-profile></div>
+      <div class="d2-legend">
+        <span class="legend-item"><i class="d2-sw d2-sw--b"></i><span data-lg-b>Bezirk</span></span>
+        <span class="legend-item"><i class="d2-sw d2-sw--l"></i>Greater London</span>
+        <span class="d2-hint">Zeiger über einen Jahrgang zeigt die genauen Werte</span>
+      </div>
+    </div>
+
+    <aside class="d2-side">
+      <div class="card">
+        <div class="d2-sidehead">
+          <h2 class="card-title" style="margin:0">Bezirke</h2>
+          <label class="search">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true">
+              <circle cx="11" cy="11" r="7"></circle><path d="M20 20l-3.6-3.6"></path>
+            </svg>
+            <input type="search" placeholder="Bezirk suchen …" aria-label="Bezirk suchen" data-q>
+          </label>
+        </div>
+        <div class="d2-list" data-list role="list"></div>
+        <div class="d2-group-legend">
+          <span><i style="background:#8fb8d8"></i>0–15 Jahre</span>
+          <span><i style="background:#00a699"></i>16–64 Jahre</span>
+          <span><i style="background:#fc642d"></i>65+ Jahre</span>
+        </div>
+      </div>
+      <div class="card">
+        <h2 class="card-title">Geschlechterverteilung 2025</h2>
+        <div data-sex></div>
+      </div>
+    </aside>
+  </div>
+
+  <footer class="viz-foot">
+    <strong>Daten:</strong> ONS Mid-Year Population Estimates 2025 (Altersstruktur in Einzeljahren,
+    Geschlecht).<br>
+    <strong>Hinweis:</strong> Die Summe der einzelnen Jahrgänge kann minimal von der
+    Gesamtbevölkerung abweichen, weil die Schätzungen getrennt gerundet werden.
+    Das letzte Intervall fasst 90 Jahre und älter zusammen.
+  </footer>
+</div>

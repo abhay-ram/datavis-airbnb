@@ -18,12 +18,21 @@
   </header>
 
   <section class="kit-section">
-    <h2 class="kit-h2"><span class="kit-num">A</span> Die sechs Varianten</h2>
+    <h2 class="kit-h2"><span class="kit-num">A</span> Datensatz 1 · Airbnb – sechs Varianten</h2>
     <div class="kit-grid" data-cards></div>
   </section>
 
   <section class="kit-section">
-    <h2 class="kit-h2"><span class="kit-num">B</span> In Pageflow einbetten</h2>
+    <h2 class="kit-h2"><span class="kit-num">B</span> Datensatz 2 · Demografie – sechs Varianten</h2>
+    <p class="kit-p kit-p--wide">
+      Eigene Quelldatei, eigene Datenexporte, eigene Visualisierungen. Die Demografie-Zahlen
+      sind bewusst <b>nicht</b> mit den Airbnb-Werten vermischt – beide Sätze stehen für sich.
+    </p>
+    <div class="kit-grid" data-cards-demo></div>
+  </section>
+
+  <section class="kit-section">
+    <h2 class="kit-h2"><span class="kit-num">C</span> In Pageflow einbetten</h2>
     <div class="kit-cols">
       <div class="kit-col">
         <h3 class="kit-h3">1 · Dateien erreichbar machen</h3>
@@ -67,33 +76,44 @@
   </section>
 
   <section class="kit-section">
-    <h2 class="kit-h2"><span class="kit-num">C</span> Daten für Datawrapper &amp; Tableau</h2>
+    <h2 class="kit-h2"><span class="kit-num">D</span> Daten für Datawrapper &amp; Tableau</h2>
     <p class="kit-p kit-p--wide">
-      Dieselben Zahlen, aufbereitet für die beiden Werkzeuge, mit denen Pageflow am besten
+      Die Daten beider Datensätze, aufbereitet für die beiden Werkzeuge, mit denen Pageflow am besten
       zusammenspielt. Alle Dateien liegen in <code>dist/data/</code>.
     </p>
     <div class="kit-files" data-files></div>
 
     <div class="kit-cols kit-cols--3">
       <div class="kit-col">
-        <h3 class="kit-h3">Datawrapper · Karte</h3>
+        <h3 class="kit-h3">Datawrapper · Karte (wie Variante 4)</h3>
         <ol class="kit-ol">
-          <li>Neue Karte → <b>Choropletenkarte</b>.</li>
-          <li>Als Kartensatz <b>„Custom Map“</b> wählen und
-            <code>london-boroughs.geojson</code> hochladen.</li>
-          <li>Als Daten <code>airbnb-london-map.csv</code> hochladen und die Spalte
-            <b>Area Code</b> mit dem GeoJSON-Feld <code>code</code> verbinden.</li>
-          <li>Unter <i>Anzeige</i> die Jahre 2015 / 2019 / 2026 als Filter anbieten.</li>
+          <li><b>New Map</b> → Kartentyp <b>Choropleth</b> wählen.</li>
+          <li>Auf <b>„Upload Map“</b> klicken und <code>london-boroughs.geojson</code>
+            hochladen. Die Datei erfüllt alle Vorgaben: Wurzeltyp
+            <code>FeatureCollection</code>, WGS-84, 126 KB (Limit 2 MB), Bezirksschlüssel
+            im Feld <code>code</code>. Mapshaper ist nicht nötig.</li>
+          <li>Im Reiter <b>Data</b> <code>airbnb-london-wide.csv</code> hochladen und die
+            Spalte <b>Area Code</b> mit dem Kartenfeld <code>code</code> verbinden.</li>
+          <li>Die drei Spalten <i>Listings 2015 / 2019 / 2026</i> als Wertereihen markieren –
+            Datawrapper erzeugt daraus automatisch einen Jahresumschalter.</li>
+          <li>Publish → die Datawrapper-URL im Pageflow-Element <b>Datawrapper chart</b>
+            einsetzen. Fertig.</li>
         </ol>
+        <p class="kit-p kit-p--muted">
+          Für eine einzelne Jahreskarte genügt <code>airbnb-london-map.csv</code>.
+          Eine Blasenkarte (wie Variante 5) entsteht mit <b>New Map → Symbol map</b> direkt
+          aus <code>airbnb-london-long.csv</code> über die Spalten <i>Latitude</i> und
+          <i>Longitude</i>.
+        </p>
       </div>
       <div class="kit-col">
         <h3 class="kit-h3">Datawrapper · Diagramm</h3>
         <ol class="kit-ol">
-          <li>Neues Diagramm → <b>Linien-</b> oder <b>Balkendiagramm</b>.</li>
+          <li>New Chart → <b>Linien-</b> oder <b>Balkendiagramm</b>.</li>
           <li><code>airbnb-london-wide.csv</code> hochladen (ein Bezirk pro Zeile,
             ein Stichtag pro Spalte).</li>
           <li>Spalten <i>Listings 2015/2019/2026</i> als Wertereihen markieren.</li>
-          <li>Ergebnis veröffentlichen und die Datawrapper-URL im Pageflow-Element
+          <li>Veröffentlichen und die Datawrapper-URL im Pageflow-Element
             <b>Datawrapper chart</b> einsetzen.</li>
         </ol>
       </div>
@@ -115,7 +135,7 @@
   </section>
 
   <section class="kit-section">
-    <h2 class="kit-h2"><span class="kit-num">D</span> URL-Parameter</h2>
+    <h2 class="kit-h2"><span class="kit-num">E</span> URL-Parameter</h2>
     <div class="kit-table-wrap">
       <table class="dtable kit-table">
         <thead>
@@ -141,7 +161,7 @@
   </section>
 
   <section class="kit-section">
-    <h2 class="kit-h2"><span class="kit-num">E</span> Steuerung aus der Host-Seite</h2>
+    <h2 class="kit-h2"><span class="kit-num">F</span> Steuerung aus der Host-Seite</h2>
     <p class="kit-p kit-p--wide">
       Die eingebettete Seite hört auf <code>postMessage</code>. Damit lässt sich die
       Visualisierung auch aus Pageflow, einem CMS oder einer eigenen Seite heraus steuern –

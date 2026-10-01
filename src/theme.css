@@ -390,6 +390,43 @@ button { font: inherit; color: inherit; }
 .viz-foot strong { color: var(--text-soft); font-weight: 600; }
 .viz-foot a { color: var(--text-soft); }
 
+/* --------------------------------------------------- ranking & stat lists -- */
+
+.ranklist { display: grid; gap: 2px; max-height: 360px; overflow-y: auto; }
+.rankrow {
+  display: grid; grid-template-columns: 16px minmax(0, 1fr) auto;
+  align-items: center; gap: 8px;
+  width: 100%; border: 0; background: transparent; cursor: pointer;
+  padding: 4px 6px; border-radius: 7px; text-align: left;
+  transition: background .15s, opacity .3s var(--ease-out);
+}
+.rankrow:hover { background: var(--bg-soft); }
+.rankrow.is-pinned { background: var(--accent-soft); }
+.rankrow .rk { font-size: 10px; color: var(--text-mute); font-variant-numeric: tabular-nums; }
+.rankrow .nm {
+  font-size: 12px; font-weight: 600; color: var(--text-soft);
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+.rankrow.is-pinned .nm, .rankrow:hover .nm { color: var(--text); }
+.rankrow .vv { font-size: 11.5px; font-weight: 700; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.rankrow .bar {
+  grid-column: 2 / 4; height: 3px; border-radius: 2px;
+  background: var(--bg-sunken); overflow: hidden; margin-top: 2px;
+}
+.rankrow .bar i { display: block; height: 100%; border-radius: 2px; }
+.ranklist-gap { text-align: center; color: var(--text-mute); font-size: 12px; line-height: 1; padding: 2px 0; }
+
+.statlist { display: grid; gap: 8px; }
+.statrow { display: flex; align-items: baseline; justify-content: space-between; gap: 10px; font-size: 12px; }
+.statrow .k { color: var(--text-soft); }
+.statrow .v { font-weight: 800; font-variant-numeric: tabular-nums; }
+
+.map-hint { margin-left: auto; color: var(--text-mute); font-size: 11px; }
+
+@media (max-width: 980px) {
+  .ranklist { max-height: 280px; }
+}
+
 /* --------------------------------------------------------------- story ---- */
 
 .story {
