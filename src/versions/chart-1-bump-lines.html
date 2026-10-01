@@ -1,0 +1,82 @@
+<div class="viz viz--chart1">
+  <header class="viz-head reveal">
+    <div class="viz-kicker">London · Airbnb · 2015 – 2026</div>
+    <h1 class="viz-title">Ein Bezirk, eine Linie: wie sich Airbnb in London verteilt</h1>
+    <p class="viz-sub">
+      Alle 33 Bezirke von Greater London auf einen Blick. Die X-Achse zeigt die drei Stichtage
+      2015, 2019 und 2026, die Y-Achse listet die Bezirke. Bewegen Sie den Zeiger über eine Linie,
+      um einen Bezirk hervorzuheben – ein Klick fixiert ihn.
+    </p>
+  </header>
+
+  <div class="controls reveal" data-delay="1">
+    <div class="ctrl-group">
+      <span class="ctrl-label">Messgröße</span>
+      <div class="seg" data-seg="metric" role="group" aria-label="Messgröße">
+        <button type="button" data-v="listings" aria-pressed="true">Inserate</button>
+        <button type="button" data-v="per1k" aria-pressed="false">Je 1.000 Einw.</button>
+      </div>
+    </div>
+
+    <div class="ctrl-group">
+      <span class="ctrl-label">Y-Achse</span>
+      <div class="seg" data-seg="mode" role="group" aria-label="Y-Achse">
+        <button type="button" data-v="rank" aria-pressed="true">Rang</button>
+        <button type="button" data-v="value" aria-pressed="false">Wert</button>
+        <button type="button" data-v="share" aria-pressed="false">Anteil</button>
+      </div>
+    </div>
+
+    <div class="ctrl-group">
+      <span class="ctrl-label">Umfang</span>
+      <div class="seg" data-seg="topn" role="group" aria-label="Umfang">
+        <button type="button" data-v="0" aria-pressed="true">Alle 33</button>
+        <button type="button" data-v="10" aria-pressed="false">Top 10</button>
+        <button type="button" data-v="20" aria-pressed="false">Top 20</button>
+      </div>
+    </div>
+
+    <div class="ctrl-group">
+      <span class="ctrl-label">Jahr</span>
+      <div class="chips" data-years role="group" aria-label="Jahr"></div>
+    </div>
+
+    <div class="ctrl-group" style="margin-left:auto">
+      <button type="button" class="btn btn--ghost" data-reset>Zurücksetzen</button>
+    </div>
+  </div>
+
+  <div class="c1-layout">
+    <div class="c1-main">
+      <div class="c1-chartwrap" data-chart></div>
+      <div class="c1-legend">
+        <span class="legend-title">Stichtag</span>
+        <span class="legend-item"><i style="background:#8fb8d8"></i>Apr 2015</span>
+        <span class="legend-item"><i style="background:#00a699"></i>Mai 2019</span>
+        <span class="legend-item"><i style="background:#fc642d"></i>19 Jun 2026</span>
+        <span class="c1-hint">Klick auf eine Linie fixiert den Bezirk</span>
+      </div>
+    </div>
+
+    <aside class="c1-side">
+      <div class="c1-sidehead">
+        <span class="card-title" style="margin:0">Bezirke</span>
+        <label class="search">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true">
+            <circle cx="11" cy="11" r="7"></circle><path d="M20 20l-3.6-3.6"></path>
+          </svg>
+          <input type="search" placeholder="Bezirk suchen …" aria-label="Bezirk suchen" data-q>
+        </label>
+      </div>
+      <div class="c1-list" data-list role="list"></div>
+    </aside>
+  </div>
+
+  <footer class="viz-foot">
+    <strong>Daten:</strong> Inside Airbnb / GLA Housing Research Note 4 (Stichtage Apr 2015 und Mai 2019),
+    Aggregation der Bezirke aus dem Inside-Airbnb-Listing-CSV vom 19. Juni 2026 (92.799 Inserate in 33 Bezirken).
+    Einwohnerzahlen: ONS.<br>
+    <strong>Hinweis:</strong> Stichtagsbeobachtungen, keine Jahresdurchschnitte. Für Havering und Sutton
+    weist die GLA-Quelle 2015 „–“ aus; der Wert ist als 0 codiert.
+  </footer>
+</div>

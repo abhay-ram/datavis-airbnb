@@ -1,0 +1,13 @@
+{
+  "name": "london-airbnb-viz-tools",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Build + smoke-test tooling for the embeddable London Airbnb visualisations.",
+  "scripts": {
+    "smoke": "node smoke.mjs"
+  },
+  "devDependencies": {
+    "jsdom": "^24.1.0"
+  }
+}

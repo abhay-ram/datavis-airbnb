@@ -1,0 +1,76 @@
+<div class="viz viz--map1">
+  <header class="viz-head reveal">
+    <div class="viz-kicker">London · Airbnb · Karte</div>
+    <h1 class="viz-title">33 Bezirke, drei Stichtage – die Karte im Wandel</h1>
+    <p class="viz-sub">
+      Jede Fläche ist ein Bezirk von Greater London, eingefärbt nach dem Airbnb-Angebot.
+      Schalten Sie das Jahr um oder lassen Sie die Zeitachse abspielen. Ein Klick auf einen
+      Bezirk fixiert ihn und zeigt seinen Verlauf.
+    </p>
+  </header>
+
+  <div class="controls reveal" data-delay="1">
+    <div class="ctrl-group">
+      <span class="ctrl-label">Jahr</span>
+      <div class="seg seg--accent" data-seg="year" role="group" aria-label="Jahr"></div>
+      <button type="button" class="btn btn--play" data-play aria-label="Zeitachse abspielen">
+        <span class="play-ico" aria-hidden="true"></span><span data-playlabel>Abspielen</span>
+      </button>
+    </div>
+    <div class="ctrl-group">
+      <span class="ctrl-label">Messgröße</span>
+      <div class="seg" data-seg="metric" role="group" aria-label="Messgröße">
+        <button type="button" data-v="listings" aria-pressed="true">Inserate</button>
+        <button type="button" data-v="per1k" aria-pressed="false">Je 1.000 Einw.</button>
+      </div>
+    </div>
+    <div class="ctrl-group">
+      <span class="ctrl-label">Darstellung</span>
+      <div class="seg" data-seg="view" role="group" aria-label="Darstellung">
+        <button type="button" data-v="choropleth" aria-pressed="true">Flächen</button>
+        <button type="button" data-v="bubbles" aria-pressed="false">Blasen</button>
+      </div>
+    </div>
+    <div class="ctrl-group" style="margin-left:auto">
+      <button type="button" class="btn btn--ghost" data-reset>Zurücksetzen</button>
+    </div>
+  </div>
+
+  <div class="m1-layout">
+    <div class="m1-mapwrap card">
+      <div data-map></div>
+      <div class="m1-legend">
+        <span class="legend-title" data-legendtitle>Inserate</span>
+        <div class="legend-ramp">
+          <span class="legend-lo" data-legendmin>0</span>
+          <span class="legend-swatches" data-swatches></span>
+          <span class="legend-hi" data-legendmax>–</span>
+        </div>
+        <span class="m1-hint">Fläche anklicken, um einen Bezirk zu fixieren</span>
+      </div>
+    </div>
+
+    <aside class="m1-side">
+      <div class="card">
+        <h2 class="card-title" data-ranktitle>Rangliste</h2>
+        <div data-rank class="m1-rank"></div>
+      </div>
+      <div class="card" data-detailcard hidden>
+        <h2 class="card-title">Ausgewählter Bezirk</h2>
+        <div data-detail></div>
+      </div>
+      <div class="card">
+        <h2 class="card-title">London gesamt</h2>
+        <div data-totals class="m1-totals"></div>
+      </div>
+    </aside>
+  </div>
+
+  <footer class="viz-foot">
+    <strong>Daten:</strong> Inside Airbnb / GLA Housing Research Note 4 (Apr 2015, Mai 2019);
+    Bezirksaggregation aus dem Inside-Airbnb-CSV vom 19. Juni 2026. Einwohnerzahlen: ONS.<br>
+    <strong>Geometrie:</strong> ONS Open Geography Portal, Local Authority Districts (Mai 2024),
+    generalisiert und geklippt, Open Government Licence v3.0.<br>
+    <strong>Hinweis:</strong> Stichtagsbeobachtungen, keine Jahresdurchschnitte.
+  </footer>
+</div>

@@ -1,0 +1,178 @@
+<div class="viz viz--wide kit">
+  <header class="kit-hero reveal">
+    <div class="viz-kicker">London · Airbnb · Embed-Kit</div>
+    <h1 class="viz-title">Sieben Visualisierungen – eine Datei pro Variante</h1>
+    <p class="viz-sub">
+      Drei Karten-Varianten, drei reine Balken-/Linien-Varianten und ein Streudiagramm, das die
+      Airbnb-Daten mit der amtlichen Demografie verknüpft. Jede Datei ist eigenständig: keine
+      Bibliothek, kein CDN, keine Server-Abhängigkeit – nur eine HTML-Datei, die sich per iframe
+      überall einbetten lässt, auch in Pageflow.
+    </p>
+    <div class="kit-badges">
+      <span class="kit-badge">33 Bezirke</span>
+      <span class="kit-badge">3 Stichtage</span>
+      <span class="kit-badge">Jahr-Filter</span>
+      <span class="kit-badge">Bezirk-Hervorhebung</span>
+      <span class="kit-badge">Scroll-Animationen</span>
+      <span class="kit-badge">verknüpft mit ONS-Demografie</span>
+      <span class="kit-badge">DSGVO-freundlich: keine externen Requests</span>
+    </div>
+  </header>
+
+  <section class="kit-section">
+    <h2 class="kit-h2"><span class="kit-num">A</span> Die sechs Varianten</h2>
+    <div class="kit-grid" data-cards></div>
+  </section>
+
+  <section class="kit-section">
+    <h2 class="kit-h2"><span class="kit-num">B</span> In Pageflow einbetten</h2>
+    <div class="kit-cols">
+      <div class="kit-col">
+        <h3 class="kit-h3">1 · Dateien erreichbar machen</h3>
+        <p class="kit-p">
+          Pageflow bettet Inhalte über eine <b>URL</b> ein – ein lokaler Dateipfad genügt nicht.
+          Laden Sie den Ordner <code>dist/</code> unverändert hoch: zu GitHub Pages, zu
+          Netlify Drop (Ordner einfach ins Browserfenster ziehen) oder auf einen eigenen
+          Webspace. Danach hat jede Variante eine Adresse wie
+          <code>https://ihre-domain.de/1-linien-nach-bezirk.html</code>.
+        </p>
+        <h3 class="kit-h3">2 · iframe-Element anlegen</h3>
+        <p class="kit-p">
+          Im Pageflow-Editor <b>+</b> → <b>iframe embed</b> wählen, die URL eintragen und die
+          Option <b>Dynamic Height</b> aktivieren. Die Dateien senden das dafür nötige
+          <code>iframe.resize</code>-Signal bereits mit – die Höhe passt sich also
+          automatisch an, auch wenn sich Diagramm oder Text ändern.
+        </p>
+        <p class="kit-p kit-p--muted">
+          Ohne Dynamic Height einfach ein Seitenverhältnis wählen: die Stories passen in
+          <b>16:9</b>, die Diagramme und Karten in <b>4:3</b> oder <b>1:1</b>.
+        </p>
+      </div>
+      <div class="kit-col">
+        <h3 class="kit-h3">3 · Diese URL in Pageflow eintragen</h3>
+        <div class="kit-code" data-urlbox>
+          <pre data-urltext>https://ihre-domain.de/1-linien-nach-bezirk.html?embed=1</pre>
+          <button type="button" class="kit-copy" data-copy>Kopieren</button>
+        </div>
+        <p class="kit-p kit-p--muted">
+          <code>?embed=1</code> schaltet den kompakten Einbettungsmodus ein. Bei den beiden
+          Scroll-Stories wird daraus automatisch ein <b>Player</b> mit Weiter-/Zurück-Buttons
+          und Tastatursteuerung – so bleibt die Geschichte auch im iframe erzählbar.
+        </p>
+        <h3 class="kit-h3">Alternativ: Code einfügen</h3>
+        <div class="kit-code">
+          <pre data-snippet></pre>
+          <button type="button" class="kit-copy" data-copy>Kopieren</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="kit-section">
+    <h2 class="kit-h2"><span class="kit-num">C</span> Daten für Datawrapper &amp; Tableau</h2>
+    <p class="kit-p kit-p--wide">
+      Dieselben Zahlen, aufbereitet für die beiden Werkzeuge, mit denen Pageflow am besten
+      zusammenspielt. Alle Dateien liegen in <code>dist/data/</code>.
+    </p>
+    <div class="kit-files" data-files></div>
+
+    <div class="kit-cols kit-cols--3">
+      <div class="kit-col">
+        <h3 class="kit-h3">Datawrapper · Karte</h3>
+        <ol class="kit-ol">
+          <li>Neue Karte → <b>Choropletenkarte</b>.</li>
+          <li>Als Kartensatz <b>„Custom Map“</b> wählen und
+            <code>london-boroughs.geojson</code> hochladen.</li>
+          <li>Als Daten <code>airbnb-london-map.csv</code> hochladen und die Spalte
+            <b>Area Code</b> mit dem GeoJSON-Feld <code>code</code> verbinden.</li>
+          <li>Unter <i>Anzeige</i> die Jahre 2015 / 2019 / 2026 als Filter anbieten.</li>
+        </ol>
+      </div>
+      <div class="kit-col">
+        <h3 class="kit-h3">Datawrapper · Diagramm</h3>
+        <ol class="kit-ol">
+          <li>Neues Diagramm → <b>Linien-</b> oder <b>Balkendiagramm</b>.</li>
+          <li><code>airbnb-london-wide.csv</code> hochladen (ein Bezirk pro Zeile,
+            ein Stichtag pro Spalte).</li>
+          <li>Spalten <i>Listings 2015/2019/2026</i> als Wertereihen markieren.</li>
+          <li>Ergebnis veröffentlichen und die Datawrapper-URL im Pageflow-Element
+            <b>Datawrapper chart</b> einsetzen.</li>
+        </ol>
+      </div>
+      <div class="kit-col">
+        <h3 class="kit-h3">Tableau</h3>
+        <ol class="kit-ol">
+          <li><code>airbnb-london-long.csv</code> als Textdatei verbinden
+            (bereinigt, eine Zeile je Bezirk × Stichtag).</li>
+          <li>Optional <code>london-boroughs.geojson</code> als
+            <b>spatial file</b> verbinden und über
+            <b>Area Code = code</b> verknüpfen.</li>
+          <li>Karte: <i>Latitude</i>/<i>Longitude</i> als Dimensionen, oder die
+            Geometrie als Polygondimension.</li>
+          <li>Im Tableau-Public-Dialog <b>Embed Code</b> kopieren und in Pageflow als
+            iframe-Element einsetzen.</li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <section class="kit-section">
+    <h2 class="kit-h2"><span class="kit-num">D</span> URL-Parameter</h2>
+    <div class="kit-table-wrap">
+      <table class="dtable kit-table">
+        <thead>
+          <tr><th>Parameter</th><th>Werte</th><th>Wirkung</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><code>embed</code></td><td><code>1</code></td><td>Kompakter Modus für iframes; Stories werden zum Player</td></tr>
+          <tr><td><code>theme</code></td><td><code>light</code> · <code>dark</code></td><td>Erzwingt ein Farbschema statt der Systemeinstellung</td></tr>
+          <tr><td><code>year</code></td><td><code>2015</code> · <code>2019</code> · <code>2026</code></td><td>Startet mit diesem Stichtag</td></tr>
+          <tr><td><code>metric</code></td><td><code>listings</code> · <code>per1k</code></td><td>Inserate oder Inserate je 1.000 Einwohner:innen</td></tr>
+          <tr><td><code>mode</code></td><td><code>rank</code> · <code>value</code> · <code>share</code></td><td>Y-Achse der Linien-Variante</td></tr>
+          <tr><td><code>topn</code></td><td><code>10</code> · <code>20</code></td><td>Nur die größten Bezirke zeigen</td></tr>
+          <tr><td><code>focus</code></td><td>Area Codes, kommagetrennt</td><td>Bezirke vorab fixieren, z. B. <code>E09000033,E09000007</code></td></tr>
+          <tr><td><code>step</code></td><td>0 … 6</td><td>Startschritt der Scroll-Stories</td></tr>
+          <tr><td><code>player</code></td><td><code>1</code></td><td>Player-Modus auch außerhalb eines iframes</td></tr>
+          <tr><td><code>autoplay</code></td><td><code>1</code></td><td>Stories laufen automatisch durch</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="kit-p kit-p--muted">
+      Beispiel: <code>…/4-karte-choropleth.html?embed=1&amp;metric=per1k&amp;year=2026&amp;focus=E09000033</code>
+    </p>
+  </section>
+
+  <section class="kit-section">
+    <h2 class="kit-h2"><span class="kit-num">E</span> Steuerung aus der Host-Seite</h2>
+    <p class="kit-p kit-p--wide">
+      Die eingebettete Seite hört auf <code>postMessage</code>. Damit lässt sich die
+      Visualisierung auch aus Pageflow, einem CMS oder einer eigenen Seite heraus steuern –
+      etwa über eigene Schaltflächen oder einen Jahresumschalter im Artikeltext.
+    </p>
+    <div class="kit-code kit-code--wide">
+      <pre data-hostcode>const frame = document.querySelector('iframe');
+frame.contentWindow.postMessage({ type: 'year', years: [2026] }, '*');
+frame.contentWindow.postMessage({ type: 'metric', metric: 'per1k' }, '*');
+frame.contentWindow.postMessage({ type: 'focus', codes: ['E09000033'] }, '*');
+frame.contentWindow.postMessage({ type: 'step', index: 3 }, '*');   // Stories
+frame.contentWindow.postMessage({ type: 'theme', theme: 'dark' }, '*');</pre>
+      <button type="button" class="kit-copy" data-copy>Kopieren</button>
+    </div>
+    <p class="kit-p kit-p--muted">
+      Umgekehrt meldet jede Datei ihre Höhe per <code>postMessage</code> – sowohl im
+      Pageflow-Format (<code>{context:"iframe.resize"}</code>) als auch als eigenes Objekt mit
+      <code>type:"height"</code>.
+    </p>
+  </section>
+
+  <footer class="viz-foot">
+    <strong>Daten:</strong> Inside Airbnb / GLA Housing Research Note 4 (Apr 2015, Mai 2019);
+    Bezirksaggregation aus dem Inside-Airbnb-Listing-CSV vom 19. Juni 2026 (92.799 Inserate in 33 Bezirken).
+    Einwohnerzahlen: ONS.<br>
+    <strong>Geometrie:</strong> ONS Open Geography Portal, Local Authority Districts (Mai 2024),
+    generalisiert und geklippt, Open Government Licence v3.0.<br>
+    <strong>Hinweis:</strong> Alle Werte sind Stichtagsbeobachtungen, keine Jahresdurchschnitte.
+    Die GLA-Erhebung von 2015 fällt systematisch niedriger aus als spätere Zählungen, wodurch die
+    Wachstumsraten zwischen 2015 und 2019 überzeichnet sein dürften.
+  </footer>
+</div>

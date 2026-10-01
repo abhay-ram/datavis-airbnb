@@ -1,0 +1,37 @@
+/* ---------------------------------------------------------- chart 3 ----- */
+
+.stage-head {
+  display: flex; align-items: flex-end; justify-content: space-between;
+  gap: 14px; padding: 0 2px 12px;
+  border-bottom: 1px solid var(--line); margin-bottom: 12px;
+}
+.stage-year {
+  font-size: 13px; font-weight: 800; letter-spacing: .06em;
+  color: var(--accent-ink);
+  font-variant-numeric: tabular-nums;
+}
+.stage-total { text-align: right; line-height: 1.1; }
+.stage-total b {
+  display: block; font-size: 26px; font-weight: 800; letter-spacing: -.035em;
+  font-variant-numeric: tabular-nums;
+}
+.stage-total span { font-size: 11px; color: var(--text-mute); }
+
+.c3-row { transition: opacity .45s var(--ease-out); }
+.c3-name { font-size: 10.5px; font-weight: 600; fill: var(--text-soft); transition: fill .3s; }
+.c3-name.is-pinned, .c3-name.is-hot { fill: var(--text); font-weight: 700; }
+.c3-val { font-size: 10.5px; font-weight: 700; fill: var(--text); font-variant-numeric: tabular-nums; }
+.c3-bar { rx: 2.5; }
+.c3-chart.has-focus .c3-row:not(.is-hot) { opacity: .18; }
+.c3-track { fill: var(--bg-sunken); }
+.c3-flag {
+  font-size: 10px; font-weight: 700; font-variant-numeric: tabular-nums;
+  transition: opacity .4s;
+}
+
+.story-stage .chart { display: block; }
+
+@media (max-width: 900px) {
+  .stage-total b { font-size: 21px; }
+  .stage-head { padding-bottom: 9px; margin-bottom: 9px; }
+}

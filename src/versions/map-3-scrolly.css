@@ -1,0 +1,35 @@
+/* ------------------------------------------------------------ map 3 ----- */
+
+.m3-legend {
+  display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px;
+  padding: 9px 4px 2px; margin-top: 4px; border-top: 1px solid var(--line);
+  font-size: 11.5px; color: var(--text-soft);
+}
+.m3-legend .legend-swatches i { width: 24px; height: 10px; }
+
+.story-stage svg { display: block; width: 100%; height: auto; }
+
+.bor { cursor: pointer; transition: fill .7s var(--ease-in-out), opacity .4s var(--ease-out); }
+.story-stage svg.has-focus .bor:not(.is-hot) { opacity: .2; }
+.bor.is-hot { stroke: var(--text); stroke-width: 1.8; }
+.bor.is-pinned { stroke: var(--accent); stroke-width: 2.4; }
+
+.m3-bub {
+  transition: r .7s var(--ease-in-out), opacity .4s var(--ease-out), fill .7s var(--ease-in-out);
+  pointer-events: none;
+}
+.story-stage svg.has-focus .m3-bub:not(.is-hot) { opacity: .12; }
+
+.m3-label { font-size: 9.5px; font-weight: 700; fill: #fff; pointer-events: none;
+  paint-order: stroke; stroke: rgba(0,0,0,.55); stroke-width: 2.4; stroke-linejoin: round; }
+
+.m3-badge {
+  transition: opacity .5s var(--ease-out), transform .5s var(--ease-spring);
+}
+.m3-badge rect { fill: var(--card); stroke: var(--line-strong); }
+.m3-badge text { font-size: 10px; font-weight: 700; fill: var(--text); }
+.m3-badge .bv { font-variant-numeric: tabular-nums; }
+
+@media (max-width: 900px) {
+  .m3-legend { font-size: 11px; }
+}

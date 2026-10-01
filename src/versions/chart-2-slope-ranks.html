@@ -1,0 +1,76 @@
+<div class="viz viz--chart2">
+  <header class="viz-head reveal">
+    <div class="viz-kicker">London · Airbnb · 2015 – 2026</div>
+    <h1 class="viz-title">Das große Aufholen: Ranglisten und Verläufe</h1>
+    <p class="viz-sub">
+      Links die Rangliste des gewählten Stichtags – beim Umschalten des Jahres wandern die Balken
+      an ihren neuen Platz. Rechts der Verlauf jedes Bezirks über alle drei Stichtage;
+      ein Klick auf einen Balken hebt die zugehörige Linie hervor.
+    </p>
+  </header>
+
+  <div class="controls reveal" data-delay="1">
+    <div class="ctrl-group">
+      <span class="ctrl-label">Jahr</span>
+      <div class="seg seg--accent" data-seg="year" role="group" aria-label="Jahr"></div>
+    </div>
+    <div class="ctrl-group">
+      <span class="ctrl-label">Messgröße</span>
+      <div class="seg" data-seg="metric" role="group" aria-label="Messgröße">
+        <button type="button" data-v="listings" aria-pressed="true">Inserate</button>
+        <button type="button" data-v="per1k" aria-pressed="false">Je 1.000 Einw.</button>
+      </div>
+    </div>
+    <div class="ctrl-group">
+      <span class="ctrl-label">Sortierung</span>
+      <div class="seg" data-seg="sort" role="group" aria-label="Sortierung">
+        <button type="button" data-v="value" aria-pressed="true">Wert</button>
+        <button type="button" data-v="name" aria-pressed="false">A–Z</button>
+        <button type="button" data-v="growth" aria-pressed="false">Wachstum</button>
+      </div>
+    </div>
+    <div class="ctrl-group" style="margin-left:auto">
+      <button type="button" class="btn btn--ghost" data-reset>Zurücksetzen</button>
+    </div>
+  </div>
+
+  <div class="c2-layout">
+    <div class="c2-main">
+      <div class="card">
+        <div class="c2-cardhead">
+          <h2 class="card-title" style="margin:0" data-bartitle>Rangliste</h2>
+          <div class="legend">
+            <span class="legend-item"><i class="sw sw--up"></i>Zunahme</span>
+            <span class="legend-item"><i class="sw sw--down"></i>Abnahme</span>
+          </div>
+        </div>
+        <div data-bars></div>
+      </div>
+    </div>
+
+    <aside class="c2-side">
+      <div class="card">
+        <h2 class="card-title">Verlauf 2015 → 2026</h2>
+        <div data-slope></div>
+        <div class="c2-slopelegend">
+          <span><i style="background:var(--y2015)"></i>2015</span>
+          <span><i style="background:var(--y2019)"></i>2019</span>
+          <span><i style="background:var(--y2026)"></i>2026</span>
+        </div>
+      </div>
+      <div class="card">
+        <h2 class="card-title">Größte Bewegungen 2015 → 2026</h2>
+        <div data-movers class="c2-movers"></div>
+      </div>
+    </aside>
+  </div>
+
+  <footer class="viz-foot">
+    <strong>Daten:</strong> Inside Airbnb / GLA Housing Research Note 4 (Apr 2015, Mai 2019) und
+    Aggregation der Bezirke aus dem Inside-Airbnb-CSV vom 19. Juni 2026 (92.799 Inserate).
+    Einwohnerzahlen: ONS.<br>
+    <strong>Hinweis:</strong> Stichtagsbeobachtungen, keine Jahresdurchschnitte. Die
+    2015er-Werte der GLA-Stichprobe fallen deutlich niedriger aus als spätere Erhebungen –
+    die Wachstumsraten sind daher nur eingeschränkt vergleichbar.
+  </footer>
+</div>

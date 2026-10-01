@@ -1,0 +1,72 @@
+<div class="viz viz--map2">
+  <header class="viz-head reveal">
+    <div class="viz-kicker">London · Airbnb · Blasenkarte</div>
+    <h1 class="viz-title">Wie ein Fleckenteppich, der sich ausbreitet</h1>
+    <p class="viz-sub">
+      Jede Blase sitzt im geografischen Zentrum eines Bezirks; ihre Fläche entspricht der Zahl
+      der Inserate. Unten stehen alle drei Stichtage nebeneinander – dieselbe Größenskala,
+      damit das Wachstum direkt vergleichbar bleibt.
+    </p>
+  </header>
+
+  <div class="controls reveal" data-delay="1">
+    <div class="ctrl-group">
+      <span class="ctrl-label">Jahr</span>
+      <div class="seg seg--accent" data-seg="year" role="group" aria-label="Jahr"></div>
+    </div>
+    <div class="ctrl-group">
+      <span class="ctrl-label">Messgröße</span>
+      <div class="seg" data-seg="metric" role="group" aria-label="Messgröße">
+        <button type="button" data-v="listings" aria-pressed="true">Inserate</button>
+        <button type="button" data-v="per1k" aria-pressed="false">Je 1.000 Einw.</button>
+      </div>
+    </div>
+    <div class="ctrl-group">
+      <span class="ctrl-label">Beschriftung</span>
+      <div class="seg" data-seg="labels" role="group" aria-label="Beschriftung">
+        <button type="button" data-v="top" aria-pressed="true">Top 8</button>
+        <button type="button" data-v="all" aria-pressed="false">Alle</button>
+        <button type="button" data-v="none" aria-pressed="false">Keine</button>
+      </div>
+    </div>
+    <div class="ctrl-group" style="margin-left:auto">
+      <button type="button" class="btn btn--ghost" data-reset>Zurücksetzen</button>
+    </div>
+  </div>
+
+  <div class="m2-layout">
+    <div class="m2-main card">
+      <div class="m2-head">
+        <h2 class="card-title" style="margin:0" data-maptitle>Inserate · 2026</h2>
+        <div class="m2-sizelegend">
+          <span class="legend-title">Blasengröße</span>
+          <span class="m2-sizeitem"><i data-size-dot="s"></i><b data-size-lo>100</b></span>
+          <span class="m2-sizeitem"><i data-size-dot="m"></i><b data-size-mid>1.000</b></span>
+          <span class="m2-sizeitem"><i data-size-dot="l"></i><b data-size-hi>10.000</b></span>
+        </div>
+      </div>
+      <div data-map></div>
+    </div>
+
+    <aside class="m2-side">
+      <div class="card">
+        <h2 class="card-title">Auf einen Blick</h2>
+        <div data-multi class="m2-multi"></div>
+        <p class="m2-note">Fläche proportional zur Inseratszahl · gleiche Skala in allen drei Karten.</p>
+      </div>
+      <div class="card" data-detailcard hidden>
+        <h2 class="card-title">Ausgewählter Bezirk</h2>
+        <div data-detail></div>
+      </div>
+    </aside>
+  </div>
+
+  <footer class="viz-foot">
+    <strong>Daten:</strong> Inside Airbnb / GLA Housing Research Note 4 (Apr 2015, Mai 2019);
+    Bezirksaggregation aus dem Inside-Airbnb-CSV vom 19. Juni 2026. Einwohnerzahlen: ONS.<br>
+    <strong>Geometrie:</strong> ONS Open Geography Portal, Local Authority Districts (Mai 2024),
+    generalisiert und geklippt, Open Government Licence v3.0. Die Blasen sitzen im Flächenschwerpunkt,
+    nicht im bevölkerungsgewichteten Zentrum.<br>
+    <strong>Hinweis:</strong> Stichtagsbeobachtungen, keine Jahresdurchschnitte.
+  </footer>
+</div>

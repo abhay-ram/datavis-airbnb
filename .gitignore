@@ -1,0 +1,25 @@
+# --- Build-Artefakte und Zwischendateien -------------------------------------
+# dist/ ist das lokale Build-Ergebnis (python tools/build.py).
+# Veröffentlicht wird docs/ - dieser Ordner liegt deshalb im Repository.
+dist/
+tools/__pycache__/
+tools/cache/
+tools/node_modules/
+tools/.npm-cache/
+tools/package-lock.json
+
+# Vorschau-Screenshots (nur lokal zum Prüfen)
+shots/
+
+# Browser-Profil des Screenshot-Laufs
+.chrome/
+
+# Betriebssystem / Editor
+Thumbs.db
+desktop.ini
+.DS_Store
+.vscode/
+.idea/
+
+# Hinweis: docs/ ist bewusst NICHT ignoriert - dieser Ordner wird
+# von GitHub Pages ausgeliefert und muss daher im Repository liegen.
