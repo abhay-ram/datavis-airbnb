@@ -28,15 +28,18 @@ def main():
     os.makedirs(DOCS)
 
     run([sys.executable, os.path.join(TOOLS, "prepare_data.py")])
+    if os.path.exists(os.path.join(TOOLS, "prepare_demography.py")):
+        run([sys.executable, os.path.join(TOOLS, "prepare_demography.py")])
     run([sys.executable, os.path.join(TOOLS, "build.py"), DOCS])
     run([sys.executable, os.path.join(TOOLS, "export_data.py"), DOCS])
 
     # GitHub Pages soll die Dateien unverändert ausliefern (kein Jekyll).
     open(os.path.join(DOCS, ".nojekyll"), "w").close()
 
-    readme = os.path.join(ROOT, "README.md")
-    if os.path.exists(readme):
-        shutil.copy2(readme, os.path.join(DOCS, "README.md"))
+    for doc in ("README.md", "WORKFLOW.md"):
+        src = os.path.join(ROOT, doc)
+        if os.path.exists(src):
+            shutil.copy2(src, os.path.join(DOCS, doc))
 
     total = 0
     for base, _dirs, files in os.walk(DOCS):

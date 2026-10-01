@@ -637,7 +637,7 @@ window.LONDON_AIRBNB = {"meta":{"title":"Airbnb in London","subtitle":"Angeboten
 (function () {
   "use strict";
 
-  var RAW = window.LONDON_AIRBNB || { boroughs: [], meta: {}, geo: {} };
+  var RAW = window.LONDON_AIRBNB || window.LONDON_DEMOGRAPHY || { boroughs: [], meta: {}, geo: {} };
   var YEARS = (RAW.meta.years || [2015, 2019, 2026]).slice();
 
   /* ------------------------------------------------------------ text ----- */
@@ -710,25 +710,31 @@ window.LONDON_AIRBNB = {"meta":{"title":"Airbnb in London","subtitle":"Angeboten
   var byCode = {};
   boroughs.forEach(function (b) { byCode[b.code] = b; });
 
-  function listings(b, y) { return b.listings[String(y)]; }
-  function per1k(b, y) { return b.per1k[String(y)]; }
+  function listings(b, y) { return b.listings ? b.listings[String(y)] : null; }
+  function per1k(b, y) { return b.per1k ? b.per1k[String(y)] : null; }
   function value(b, metric, y) { return metric === "per1k" ? per1k(b, y) : listings(b, y); }
   function metricLabel(metric) { return metric === "per1k" ? T.metricPer1k : T.metricListings; }
 
   var totals = {};
   YEARS.forEach(function (y) {
-    totals[y] = boroughs.reduce(function (s, b) { return s + listings(b, y); }, 0);
+    totals[y] = boroughs.reduce(function (s, b) { return s + (listings(b, y) || 0); }, 0);
   });
-  var maxListings = Math.max.apply(null, boroughs.map(function (b) {
-    return Math.max.apply(null, YEARS.map(function (y) { return listings(b, y); }));
-  }));
-  var maxPer1k = Math.max.apply(null, boroughs.map(function (b) {
-    return Math.max.apply(null, YEARS.map(function (y) { return per1k(b, y); }));
-  }));
+  function maxOf(fn) {
+    var m = 0;
+    boroughs.forEach(function (b) {
+      YEARS.forEach(function (y) {
+        var v = fn(b, y);
+        if (v != null && isFinite(v)) m = Math.max(m, v);
+      });
+    });
+    return m;
+  }
+  var maxListings = maxOf(listings);
+  var maxPer1k = maxOf(per1k);
 
   function ranks(metric, year) {
     var order = boroughs.slice().sort(function (a, b) {
-      return value(b, metric, year) - value(a, metric, year);
+      return (value(b, metric, year) || 0) - (value(a, metric, year) || 0);
     });
     var out = {};
     order.forEach(function (b, i) { out[b.code] = i + 1; });
@@ -743,7 +749,7 @@ window.LONDON_AIRBNB = {"meta":{"title":"Airbnb in London","subtitle":"Angeboten
   }
   function growth(b, metric, from, to) {
     var a = value(b, metric, from), z = value(b, metric, to);
-    if (!a) return { abs: z - a, pct: Infinity, factor: Infinity };
+    if (!a || a === 0) return { abs: (z || 0) - (a || 0), pct: Infinity, factor: Infinity };
     return { abs: z - a, pct: ((z - a) / a) * 100, factor: z / a };
   }
   function domain(metric) { return metric === "per1k" ? maxPer1k : maxListings; }
