@@ -98,19 +98,25 @@ node tools/serve.mjs             # http://127.0.0.1:4173/
 
 ## 4 · Veröffentlichen
 
+Ein Befehl erledigt alles:
+
 ```bash
-python tools/publish.py
-git add -A
-git commit -m "Update"
-git push
+python tools/deploy.py "Was sich geändert hat"
 ```
 
-**GitHub Pages (einmalig einstellen):**
-Settings → Pages → Source: *Deploy from a branch* → Branch `main`, Ordner `/docs` → Save.
+Das baut die Website nach `docs/`, committet und pusht `main` und spiegelt `docs/`
+in den Branch `gh-pages`, aus dem GitHub Pages die Seite ausliefert.
 
-Danach ist die Seite unter `https://abhay-ram.github.io/datavis-airbnb/` erreichbar.
-Der Ordner `docs/` liegt bewusst im Repository, weil GitHub Pages ihn direkt ausliefert;
-`dist/` ist reines Build-Ergebnis und steht in `.gitignore`.
+**Wie es eingerichtet ist** (bereits erledigt, nur zur Information):
+
+* Repository: <https://github.com/abhay-ram/datavis-airbnb> (öffentlich)
+* Pages-Quelle: Branch **`gh-pages`**, Ordner **`/`** – dieser Branch enthält
+  denselben Inhalt wie `docs/` auf `main`, aber im Wurzelverzeichnis.
+* Live-Adresse: **<https://abhay-ram.github.io/datavis-airbnb/>**
+
+Der Branch `gh-pages` wird ausschließlich erzeugt (`git commit-tree` aus `docs/`) –
+er wird nie von Hand bearbeitet. `docs/` auf `main` bleibt die lesbare Fassung,
+`dist/` ist reines Build-Ergebnis und in `.gitignore`.
 
 ---
 

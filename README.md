@@ -21,6 +21,9 @@ python tools/build.py
 # Website für GitHub Pages nach docs/ bauen
 python tools/publish.py
 
+# bauen, committen, pushen, Seite aktualisieren
+python tools/deploy.py "Was sich geändert hat"
+
 # Datenexporte für Datawrapper / Tableau neu erzeugen
 python tools/export_data.py
 
@@ -32,31 +35,22 @@ cd tools && node smoke.mjs
 
 ## Veröffentlichen (GitHub Pages)
 
-Das Repository ist vorbereitet: Branch `main`, Remote `origin`,
-veröffentlichter Ordner `docs/`.
+**Live: <https://abhay-ram.github.io/datavis-airbnb/>**
+
+Ein Befehl baut, committet, pusht und aktualisiert die Seite:
 
 ```bash
-git remote -v                       # origin -> datavis-airbnb.git
-git push -u origin main             # Zugangsdaten werden einmalig abgefragt
+python tools/deploy.py "Was sich geändert hat"
 ```
 
-Danach im Repository einmalig einstellen:
-**Settings → Pages → Source: „Deploy from a branch“ → Branch: `main` → Ordner: `/docs` → Save**
-
-Nach ein bis zwei Minuten ist die Seite erreichbar unter
-
-```
-https://abhay-ram.github.io/datavis-airbnb/
-```
+Im Hintergrund: `docs/` wird auf `main` committet und zusätzlich in den Branch
+`gh-pages` gespiegelt – daraus liefert GitHub Pages die Seite aus. Nach dem Push
+ist die Änderung nach etwa einer Minute online.
 
 Diese Adresse ist zugleich die Basis für die Pageflow-Einbettung, z. B.
 `https://abhay-ram.github.io/datavis-airbnb/1-linien-nach-bezirk.html?embed=1`.
 
-Nach Änderungen an den Quellen genügt:
-
-```bash
-python tools/publish.py && git add -A && git commit -m "Update" && git push
-```
+Details zum Ablauf stehen in [`WORKFLOW.md`](WORKFLOW.md).
 
 ---
 
